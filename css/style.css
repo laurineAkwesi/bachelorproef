@@ -12,14 +12,14 @@
     padding: 0;
 }
 
-h1{
-    font-family: "Palanquin Dark" ;
+h1 {
+    font-family: "Palanquin Dark";
     font-size: 30pt;
 }
 
 p,
 text,
-a{
+a {
     font-family: Montserrat;
 }
 
@@ -44,7 +44,7 @@ a{
     line-height: 80px;
 }
 https://stackoverflow.com/questions/30624709/css-html-navigation-and-logo-on-same-line/30624865*/
-.logo{
+.logo {
     width: 8%;
 }
 
@@ -54,7 +54,7 @@ https://stackoverflow.com/questions/30624709/css-html-navigation-and-logo-on-sam
 }
 
 .header a,
-.header img{
+.header img {
     text-align: center;
     color: black;
     float: left;
@@ -65,68 +65,69 @@ https://stackoverflow.com/questions/30624709/css-html-navigation-and-logo-on-sam
     text-decoration: none;
 }
 
-.header a{
+.header a {
     margin-top: 2em;
 }
 
-.header img{
+.header img {
     padding: 0;
 }
 
 
-.zoekHulpbutton{
+.zoekHulpbutton {
     border: 2px solid #4CAF50;
     border-radius: 20px;
     width: 120px;
 }
 
 /*home*/
-.homeVideo{
+.homeVideo {
     width: 100%;
     height: auto;
 }
 
-.inspoQuotes{
+.inspoQuotes {
     margin: auto;
     width: 70%;
     padding: 10px;
 }
 
-.svg{
+.svg {
     width: 100%;
     height: auto;
 }
 
-.svgText{
+.svgText {
     font: italic 30px sans-serif;
 }
 
-.pQuote{
+.pQuote {
     text-align: center;
 }
 
 .divWieZijnWe,
-.divWatDoenWe{
-    margin: auto;
-    width: 45%;
+.divWatDoenWe {
     padding: 100px;
 }
+
 .divWieZijnWe,
-.homeLogoL{
-   float: right;
+.homeLogoL {
+    float: right;
+    width: 50%;
 }
 
 .divWatDoenWe,
-.homeLogoR{
+.homeLogoR {
     float: left;
+    width: 50%;
 }
 
 .homeLogoL,
-.homeLogoR{
+.homeLogoR {
     width: 30%;
 }
 
-.StruktrFooter{
+.StruktrFooter {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -188,12 +189,13 @@ text-align: center;
     left: 35%;
     transform: translate(-50%, -50%); /*zoek hulp*/
 }
-.logoHersenen{
+
+.logoHersenen {
     width: 20%;
     float: right;
 }
 
-.test{
+.test {
     display: inline;
 }
 
@@ -215,13 +217,13 @@ text-align: center;
     transform: translate(-50%, -50%); /*zoek hulp*/
 }
 
-.detailStoornis video{
+.detailStoornis video {
     width: 40%;
     height: auto;
     padding-left: 10%;
 }
 
-.detailStoornis p{
+.detailStoornis p {
     float: right;
     width: 40%;
 }
