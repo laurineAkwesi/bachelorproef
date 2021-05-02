@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "centra": "lorem ipsum",
+      "locatie": "Lorem ipsum dolor sit amet",
+      "socialeMedia": [
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        }
+      ],
+      "specialisatie": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec commodo sapien eros, non accumsan eros laoreet eu. Nulla utmaximus justo. Cras rutrum magna velit, quis volutpat est vulputatenon. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a"
+    },
+    {
+      "id": 2,
+      "centra": "lorem ipsum",
+      "locatie": "Lorem ipsum dolor sit amet",
+      "socialeMedia": [
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        }
+      ],
+      "specialisatie": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec commodo sapien eros, non accumsan eros laoreet eu. Nulla utmaximus justo. Cras rutrum magna velit, quis volutpat est vulputatenon. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a"
+    },
+    {
+      "id": 3,
+      "centra": "lorem ipsum",
+      "locatie": "Lorem ipsum dolor sit amet",
+      "socialeMedia": [
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        }
+      ],
+      "specialisatie": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec commodo sapien eros, non accumsan eros laoreet eu. Nulla utmaximus justo. Cras rutrum magna velit, quis volutpat est vulputatenon. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a"
+    },
+    {
+      "id": 4,
+      "centra": "lorem ipsum",
+      "locatie": "Lorem ipsum dolor sit amet",
+      "socialeMedia": [
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        },
+        {
+          "Lorem ipsum": "lorem ipmsum"
+        }
+      ],
+      "specialisatie": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec commodo sapien eros, non accumsan eros laoreet eu. Nulla utmaximus justo. Cras rutrum magna velit, quis volutpat est vulputatenon. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a"
+    }
+  ]
+}
