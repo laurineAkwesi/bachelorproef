@@ -47,7 +47,7 @@ function newUser() {
             password: $('#newPassword').val(),
             passwordCheck: $('#newPasswordCheck').val()
         }
-        console.log(newUser)
+        console.log(newUser);
         console.log("pressed");
         $.ajax({
             url: "http://127.0.0.1:63342/api/newUser",
@@ -64,3 +64,14 @@ function newUser() {
     });
 }
 
+
+function stroornissen() {
+    console.log("hure");
+    $.ajax({
+        url:`json/zoekHulp.json`,
+        type:``,
+        dataType: JSON
+    }).done(function (data) {
+        console.log("yess")
+    })
+}
