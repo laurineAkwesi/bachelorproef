@@ -20,7 +20,7 @@ client.connect(err => {
 
 
 let runProgram = () => {
-    collection.insertOne({
+    /*collection.insertOne({
         "userId": Math.round(Math.random() * 100),
         "username": "laurineAK",
         "name": "laurine",
@@ -31,7 +31,7 @@ let runProgram = () => {
         console.log(err)
         console.log("inserted");
         console.log(result)
-    }
+    }*/
 
     app.post('/api/newUser', (req, res) => {
         if (req.body.password != req.body.passwordCheck) {
@@ -59,6 +59,26 @@ let runProgram = () => {
                     console.log(result)
                 })
         }
+    })
+
+    app.post('/api/video', (req, res) => {
+            let username = req.body.username;
+            let videoId = req.body.videoId;
+            let comment = req.body.comment
+
+            collection.insertOne({
+                "commentId": Math.round(Math.random() * 100),
+                "videoId": [{
+                    "videoId": videoId,
+                    "username": username,
+                    "comment": comment
+                }]
+            }, function (err, result) {
+                assert.equal(err, null);
+                console.log(err)
+                console.log("inserted");
+                console.log(result)
+            })
     })
 };
 
