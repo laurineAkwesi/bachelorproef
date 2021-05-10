@@ -1,7 +1,19 @@
-const express = require('express');
+const express = require("express");
 const app = express();
+const bodyparser = require('body-parser')
 const port = 63342;
 const assert = require('assert');
+
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE")
+    next();
+});
+
+app.use(bodyparser.urlencoded({
+    extended: false
+}));
 
 const username = "laurineAkwesi";
 const password = "Laurine123";
@@ -80,12 +92,35 @@ let runProgram = () => {
                 console.log(result)
             })
     })
+
+    app.post('/api/login', function (req, data) {
+        let username = req.body.username;
+        let passwordLogin = req.body.password;
+        console.log(passwordLogin)
+        let mongoPass;
+        console.log(mongoPass)
+
+        //})
+    })
+
+    app.get('/api/getUserData/:id', (req, res) => {
+        let userid = req.params.id
+        //console.log(parseInt(userid)
+        collection.find({
+            userId: parseInt(userid)
+        }).toArray(function (err, docs) {
+            //console.log(docs)
+            res.send(docs);
+        });
+    })
+
+
+    app.get('/', (req, res) => {
+        res.send('Hello Bitch!')
+    });
 };
 
 
-app.get('/', (req, res) => {
-    res.send('Hello Bitch!')
-});
 
 app.listen(port, () => {
     console.log(`app listening at http://localhost:${port}`)

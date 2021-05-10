@@ -2,49 +2,64 @@
   "data": [
     {
       "id": 1,
-      "centra": "lorem ipsum",
-      "locatie": "Lorem ipsum dolor sit amet",
+      "centra": "Awel",
+      "discriptie": "Bij Awel kunnen jongeren met al hun vragen of problemen terecht. Het is gratis en anoniem. Er luistert altijd iemand naar je verhaal. Ze proberen je te helpen en een antwoord te zoeken op je vragen.s",
       "socialeMedia": [
         {
-          "Lorem ipsum": "lorem ipmsum"
+          "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen."
         },
         {
-          "Lorem ipsum": "lorem ipmsum"
+          "forum": "lorem ipmsum"
         },
         {
-          "Lorem ipsum": "lorem ipmsum"
+          "bellen": "lorem ipmsum"
         },
         {
-          "Lorem ipsum": "lorem ipmsum"
+          "website": "www.awel.be"
         },
         {
-          "Lorem ipsum": "lorem ipmsum"
+          "mail": "brievenbus@awel.be"
+        },
+        {
+          "facebook": "awel"
+        },
+        {
+          "twitter": "awel"
+        },
+        {
+          "instagram": "awel"
         }
-      ],
-      "specialisatie": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec commodo sapien eros, non accumsan eros laoreet eu. Nulla utmaximus justo. Cras rutrum magna velit, quis volutpat est vulputatenon. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a"
+      ]
     },
     {
       "id": 2,
-      "centra": "lorem ipsum",
-      "locatie": "Lorem ipsum dolor sit amet",
-      "socialeMedia": [
+      "centra": "Jongerenadviescentrum",
+      "discriptie": "Het JAC geeft je gratis raad en hulp op moeilijke momenten. Er kunnen heel wat problemen aan bod komen: vragen over alleen wonen, ruzies in het gezin, seksueel misbruik, depressie, "      ",socialeMedia": [
         {
-          "Lorem ipsum": "lorem ipmsum"
+          "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen."
         },
         {
-          "Lorem ipsum": "lorem ipmsum"
+          "langsgaan": "location"
         },
         {
-          "Lorem ipsum": "lorem ipmsum"
+          "bellen": "lorem ipmsum"
         },
         {
-          "Lorem ipsum": "lorem ipmsum"
+          "website": "www.Jac.be"
         },
         {
-          "Lorem ipsum": "lorem ipmsum"
+          "mail": "https://www.caw.be/jac/contacteer-ons/mail/"
+        },
+        {
+          "facebook": "JAC"
+        },
+        {
+          "twitter": "JAC"
+        },
+        {
+          "YouTube": "JAC"
         }
-      ],
-      "specialisatie": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec commodo sapien eros, non accumsan eros laoreet eu. Nulla utmaximus justo. Cras rutrum magna velit, quis volutpat est vulputatenon. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a"
+      ]
     },
     {
       "id": 3,
