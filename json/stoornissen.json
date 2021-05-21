@@ -1,22 +1,21 @@
 {
-  "data": [
-    {
+  "data": [{
       "id": 1,
       "onderwerp": "Depressie",
       "video": "mp4",
-      "discriptie": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec commodo sapien eros, non accumsan eros laoreet eu. Nulla utmaximus justo. Cras rutrum magna velit, quis volutpat est vulputatenon. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a"
+      "discriptie": "Iedereen heeft wel eens een dipje of voelt zich even down. Dat is heel normaal, niet elke dag is even prettig. Maar als je verschillende weken of maanden nergens nog zin in hebt en de droevige gevoelens blijven duren, is er kans op een depressie. Niets interesseert je nog. Alles lijkt somber. Een depressie duurt een tijdje. Het is niet zomaar een dagje triest zijn."
     },
     {
       "id": 2,
       "onderwerp": "Dwangstoornissen",
       "video": "mp4",
-      "discriptie": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec commodo sapien eros, non accumsan eros laoreet eu. Nulla utmaximus justo. Cras rutrum magna velit, quis volutpat est vulputatenon. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a"
+      "discriptie": "Bij een dwangstoornis heeft u steeds gedachten die u eigenlijk niet wilt hebben. Deze gedachten komen steeds terug. Bij die dwanggedachten horen vaak dwanghandelingen: u moet van uzelf steeds bepaalde dingen doen. En u moet dat steeds volgens vaste regels doen. U bent bang dat er iets ergs gebeurt als u die dingen niet doet. Ook heeft u het gevoel dat u minder somber en minder bang wordt door steeds die dingen te doen."
     },
     {
       "id": 3,
       "onderwerp": "Post-traumatisch stresstoornis",
       "video": "mp4",
-      "discriptie": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec commodo sapien eros, non accumsan eros laoreet eu. Nulla utmaximus justo. Cras rutrum magna velit, quis volutpat est vulputatenon. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a"
+      "discriptie": "Posttraumatische stressstoornis of PTSS is een psychische aandoening die kan ontstaan na het meemaken van schokkende, traumatische ervaringen. Patiënten ervaren langdurig psychische gevolgen van deze ervaringen. PTSS heeft grote gevolgen voor het dagelijks functioneren."
     },
     {
       "id": 4,
@@ -25,10 +24,10 @@
       "discriptie": "Je bent bang dat er iets vreselijks zal gebeuren met je lichaam. Bovendien wordt die angst nog sterker omdat je bang bent voor de reacties van je lichaam. Bijvoorbeeld je hart dat heel snel klopt, zweten, misselijk zijn, niet goed kunnen ademen, duizelig zijn, pijn in de borst, het idee hebben dat je gaat stikken, het enorm koud/warm krijgen, buikpijn hebben, het gevoel hebben dat je niet meer jezelf bent, … (Paniekaanval)."
     },
     {
-      "id": 5 ,
+      "id": 5,
       "onderwerp": "Eetstoornis",
       "video": "mp4",
-      "discriptie": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec commodo sapien eros, non accumsan eros laoreet eu. Nulla utmaximus justo. Cras rutrum magna velit, quis volutpat est vulputatenon. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a"
+      "discriptie": "Iedereen heeft wel eens moeite om te eten, let eens op zijn voeding of eet eens wat meer dan gewoonlijk. Daar kunnen allerlei redenen voor zijn: je wil wat kilo’s kwijt, je voelt je ziek waardoor je minder zin hebt om te eten, je hebt veel etentjes tijdens de feestdagen, …. Als je problemen hebt met eten wil dat niet meteen zeggen dat je een eetstoornis hebt Wanneer je kampt met een eetstoornis, begint eten de baas te worden over je leven.Je bent voortdurend bezig met je gewicht of met je volgende maaltijd of tussendoortje."
     }
   ]
 }

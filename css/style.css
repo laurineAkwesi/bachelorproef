@@ -12,6 +12,10 @@
     padding: 0;
 }
 
+body {
+    background-color: #fdfcf7;
+}
+
 h1 {
     font-family: "Palanquin Dark";
     font-size: 30pt;
@@ -21,6 +25,66 @@ p,
 text,
 a {
     font-family: Montserrat;
+}
+
+.nav-item {
+    margin-right: 10em;
+    text-transform: uppercase;
+    padding: 0;
+    color: #000;
+}
+
+.navbar-nav:first-child {
+    margin-left: 10em;
+}
+
+.thumbnail {
+    position: relative;
+    margin-bottom: 20%;
+}
+
+.caption {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    font-size: large;
+    color: #fdfcf7;
+    font-size: 15pt;
+}
+
+.author {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.even {
+    text-align: left;
+    float: left;
+    width: 45%;
+    padding-left: 10%;
+    margin: 5%;
+}
+
+.oneven {
+    text-align: right;
+    float: right;
+    width: 45%;
+    padding-right: 10%;
+    margin: 5%;
+}
+
+p.stoornisDiv {
+    width: 70%;
+    padding: 20%;
+}
+
+.zoekHulp {
+    width: 40%;
+}
+
+.stoornisDiscriptie {
+    margin: 5% 0;
 }
 
 /*.header {
@@ -44,13 +108,13 @@ a {
     line-height: 80px;
 }
 https://stackoverflow.com/questions/30624709/css-html-navigation-and-logo-on-same-line/30624865*/
-.logo {
+/*.logo {
     width: 8%;
 }
 
 .header {
     overflow: hidden;
-    /*background-color: #0054A4;*/
+    /*background-color: #0054A4;
 }
 
 .header a,
@@ -80,7 +144,7 @@ https://stackoverflow.com/questions/30624709/css-html-navigation-and-logo-on-sam
     width: 120px;
 }
 
-/*home*/
+/*home
 .homeVideo {
     width: 100%;
     height: auto;
@@ -169,11 +233,11 @@ text-align: center;
     text-align: right;
     float: right;
 
-}*/
+}
 
 .containerLeft {
     background-image: url("../_assets/backgroundStoornis.png");
-    /*background-color: #4CAF50;*/
+    /*background-color: #4CAF50;
     background-size: 70%;
     height: 500px;
     background-position: center;
@@ -185,9 +249,9 @@ text-align: center;
     width: 30%;
     position: absolute;
     display: inline-block;
-    top: 45%; /*wie zijn we*/
+    top: 45%; /*wie zijn we
     left: 35%;
-    transform: translate(-50%, -50%); /*zoek hulp*/
+    transform: translate(-50%, -50%); /*zoek hulp
 }
 
 .logoHersenen {
@@ -212,9 +276,9 @@ text-align: center;
     background-color: cornflowerblue;
     width: 30%;
     position: absolute;
-    top: 45%; /*wie zijn we*/
+    top: 45%; /*wie zijn we
     right: 10%;
-    transform: translate(-50%, -50%); /*zoek hulp*/
+    transform: translate(-50%, -50%); /*zoek hulp
 }
 
 .detailStoornis video {
@@ -226,9 +290,4 @@ text-align: center;
 .detailStoornis p {
     float: right;
     width: 40%;
-}
-
-
-
-
-
+}*/

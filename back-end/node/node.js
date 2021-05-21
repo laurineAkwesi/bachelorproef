@@ -127,8 +127,9 @@ let runProgram = () => {
                     }
                 }
             },
-            function (error, success) {
+            function (error, docs) {
                 console.log("succes")
+                res.send(docs);
             });
     });
 

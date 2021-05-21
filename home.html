@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/home.js"></script>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css
@@ -16,59 +19,61 @@
 
 <body>
     <header>
-        <nav class="header">
-            <img src="_assets/logo-02.png" class="logo">
-            <a href="home.html">Wie zijn we</a>
-            <a href="stoornissen.html">Stoornissen</a>
-            <a href="zoek_hulp.html" class="zoekHulpbutton">Zoek hulp</a>
-            <a href="profiel.html" id="navLogin">Login</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img src="_assets/logo-02.png" class="navbar-brand" width="130" height="150">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="home.html">wie zijn we</a>
+                    <a class="nav-item nav-link" href="stoornissen.html">Stoornissen</a>
+                    <a class="nav-item nav-link" href="zoek_hulp.html">Zoek hulp</a>
+                    <a class="nav-item nav-link" href="profiel.html">Login</a>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <div>
-        <video class="homeVideo" controls>
+    <div class="embed-responsive embed-responsive-16by9">
+        <video controls>
             <source src="movie.mp4" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video>
     </div>
 
-    <div>
+    <div class="row" id="box-search">
+        <div class="thumbnail text-center">
+            <img src="_assets/Path 235.png" alt="" class="img-responsive" width="100%">
+            <div class="caption">
 
-        <svg xmlns="http://www.w3.org/2000/svg" class="svg" viewBox="0 0 1919.802 868.976">
-            <path id="Path_235" data-name="Path 235"
-                d="M1322-652.616c-168.343,336.9-455,148.859-455,148.859S610.339-603.964,488.285-387.96-71.008-308.981-71.008-308.981-181.672-403.493-274-283.992-597.8-171.717-597.8-171.717v-868.892H1322Z"
-                transform="translate(597.802 1040.609)" fill="#e9f3ff" />
-            <text x="30%" y="35%" class="svgText">"The best teacher is experience learned from failures."</text>
-        </svg>
-
-
-        <!--<div class="inspoQuotes">
-        inspirationele quotes
-        <p class="pQuote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien eros,
-        non accumsan eros laoreet eu. Nulla ut maximus justo. Cras rutrum magna velit, quis volutpat
-        est vulputate non. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a </p>
-    </div>-->
+            </div>
+        </div>
     </div>
 
-    <div class="divWieZijnWe">
-        <!--wie zijn we-->
-        <img class="homeLogoR" src="_assets/logo-02.png">
-        <h1>Wie zijn we</h1>
-        <p class="pWieZijnWe">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien eros,
-            non accumsan eros laoreet eu. Nulla ut maximus justo. Cras rutrum magna velit, quis volutpat
-            est vulputate non. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a </p>
-    </div>
-
-    <div class="divWatDoenWe">
-        <!--wat doen we-->
-        <img class="homeLogoL" src="_assets/logo-02.png">
-        <div>
-            <h1>Wat doen we</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien eros,
+    <div class="d-flex justify-content-around">
+        <div class=" d-inline p-2 wieZijnWe">
+            <!--wie zijn we-->
+            <img class="homeLogoR" src="_assets/logo-02.png" width="250" height="250">
+        </div>
+        <div class="d-inline p-2" style="width: 40%;">
+            <h1>Wie zijn we</h1>
+            <p class="pWieZijnWe">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien eros,
                 non accumsan eros laoreet eu. Nulla ut maximus justo. Cras rutrum magna velit, quis volutpat
                 est vulputate non. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a </p>
         </div>
+    </div>
+
+    <div class="d-flex justify-content-around" style="margin-top: 10em;">
+        <div class="d-inline p-2" style="width: 40%;">
+            <h1>Wat doen we</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien eros,
+                non accumsan eros laoreet eu. Nulla sut maximus justo. Cras rutrum magna velit, quis volutpat
+                est vulputate non. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a </p>
+        </div>
+        <div class=" d-inline p-2">
+            <!--wat doen we-->
+            <img class="homeLogoL" src="_assets/logo-02.png" width="250" height="250">
+        </div>
+
+    </div>
     </div>
 
     <!--<footer class="StruktrFooter">

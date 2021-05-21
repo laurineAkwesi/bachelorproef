@@ -16,9 +16,15 @@ $(document).ready(function () {
     $('.updateProfile').hide();
 
     $('.leesMeer').on('click', function () {
-        $('.stoornis').hide();
+        $('#stoornis').hide();
         $('.stoornisDetail').show();
     });
+
+    $('.BewerkTerug').on('click', function () {
+        $('.updateProfile').hide();
+        $('.profielInfo').show();
+    });
+
 });
 
 function quote() {
@@ -31,7 +37,8 @@ function quote() {
         let randomQuote = Math.floor((Math.random() * 100) + 1);
         let quote = data[randomQuote];
         console.log(quote.text);
-        $(`<text x='30%' y='35%' class='svgText'>`).text(`${quote.text}`).appendTo('.svg');
+        $(`<p class='quote'>`).text(`${quote.text}`).appendTo('.caption');
+        $(`<p class='author'>`).text(`- ${quote.author} -`).appendTo('.caption');
     })
 }
 
@@ -46,7 +53,7 @@ function profiel() {
         //console.log(data)
         let userData = data
         userData = userData.sort();
-        console.log(data)
+        //console.log(data)
         for (let i = 0; i < userData.length; i += 1) {
             let result = userData[i];
             let storeID = result.userId;
@@ -107,18 +114,37 @@ function dagboek() {
     let userid = localStorage.getItem("userId")
     $('.dagboekVerstuur').on("click", function (e) {
         e.preventDefault()
-        let verhaal = {
+        let verhaalInfo = {
             titel: $('.dagboekTitel').val(),
             verhaal: $('.dagboekVerhaal').val(),
         }
-        console.log(verhaal);
+        //console.log(verhaal);
         $.ajax({
             url: `http://localhost:63342/dagboek/${userid}`,
             type: 'POST',
-            data: verhaal,
-        }).done(function (data) {
-            console.log(data)
+            data: verhaalInfo,
+            success: function (response) {
+                response = response.value.dagboek
+                console.log(response)
+                //gets last array element
+                //console.log(response.slice(-1)[0])
+
+                //let dag = result[i]
+                //console.log(dag)
+                /*let div = $(`<div class='verhaal' id= ${response.verhaalId}>`);
+
+                $(`<p type=text id= ${response.verhaalId}>`).text(`Titel: ${response.titel}`).appendTo(div)
+                $(`<p type=text id= ${response.verhaalId}>`).text(`verhaal: ${response.verhaal}`).appendTo(div);
+
+                $(".dagboekContent").append(div);*/
+
+            }
         })
+    })
+
+    $('.dagboekVerstuur').on('click', function () {
+        $('.dagboekTitel').val("")
+        $('.dagboekVerhaal').val("")
     })
 }
 
@@ -126,8 +152,9 @@ function dagboekShow(userData) {
     let userid = localStorage.getItem("userId")
     //let result = userData[0].dagboek;
     let data = userData[0].dagboek
+
     for (let dag of data) {
-        console.log(dag)
+        //console.log(dag)
         //let dag = result[i]
         //console.log(dag)
         let div = $(`<div class='verhaal' id= ${dag.verhaalId}>`);
@@ -136,6 +163,7 @@ function dagboekShow(userData) {
         $(`<p type=text id= ${dag.verhaalId}>`).text(`verhaal: ${dag.verhaal}`).appendTo(div);
 
         $(".dagboekContent").append(div);
+
     }
 }
 
@@ -270,14 +298,23 @@ function stroornissen() {
         //console.log(data);
         for (let result of data.data) {
             //console.log((result))
-            let div = $(`<div class='stoornisDiv' id= ${result.id}>`);
-            let p = $(`<p id= ${result.id}>`);
+            let div = $(`<div id= ${result.id} class="stoornisDiv d-flex justify-content-center">`);
+            let p = $(`<div id= ${result.id}>`);
 
             $(`<h1 id= ${result.id}>`).text(`${result.onderwerp}`).appendTo(p);
-            $(`<p id= ${result.id}>`).text(`${result.discriptie}`).appendTo(p);
-            $(`<button id= ${result.id} class="infoButton">`).text(`meer info`).appendTo(p);
+            $(`<p id= ${result.id} class="stoornisDiscriptie">`).text(`${result.discriptie}`).appendTo(p);
+            $(`<button id= ${result.id} class="btn btn-outline-danger infoButton">`).text(`meer info`).appendTo(p);
             div.append(p);
-            $(".stoornis").append(div);
+            $("#stoornis").append(div);
+
+            /*if (result.id % 2 === 0) {
+                $(".stoornisDiv").addClass("even");
+            } else{ 
+                $(".stoornisDiv").addClass("oneven");
+            }*/
+            $(".stoornisDiv:even").addClass("even")
+            $(".stoornisDiv:odd").addClass("oneven");
+
         }
 
         $('.infoButton').on("click", function () {
@@ -292,7 +329,7 @@ function stroornissen() {
 
 function stoornisDetail(id) {
     console.log(id);
-    $('.stoornis').hide();
+    $('#stoornis').hide();
     $('.stoornisDetail').show();
 
     $.ajax({
@@ -322,7 +359,7 @@ function stoornisDetail(id) {
 
         $('.terugStroonis').on("click", function () {
             $('.stoornisDetail').hide();
-            $('.stoornis').show();
+            $('#stoornis').show();
             $('.stoornisDetail').empty()
         })
 

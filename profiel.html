@@ -7,20 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/home.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Profiel</title>
 </head>
 
 <body>
     <header>
-        <nav class="header">
-            <img src="_assets/logo-02.png" class="logo">
-            <a href="home.html">Wie zijn we</a>
-            <a href="stoornissen.html">Stoornissen</a>
-            <a href="zoek_hulp.html" class="zoekHulpbutton">Zoek hulp</a>
-            <a href="profiel.html" id="navLogin">Login</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img src="_assets/logo-02.png" class="navbar-brand" width="130" height="150">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="home.html">wie zijn we</a>
+                    <a class="nav-item nav-link" href="stoornissen.html">Stoornissen</a>
+                    <a class="nav-item nav-link" href="zoek_hulp.html">Zoek hulp</a>
+                    <a class="nav-item nav-link" href="profiel.html">Login</a>
+                </div>
+            </div>
         </nav>
     </header>
+
 
     <div class="loginForm">
         <h1 class="title">login</h1>
@@ -63,8 +70,8 @@
                 maximus justo. Cras rutrum magna velit, quis volutpat est vulputate
                 non. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a
             </p>-->
-            <textarea class="dagboekTitel"></textarea>
-            <textarea class="dagboekVerhaal"></textarea>
+            <input class="dagboekTitel"></input>
+            <input class="dagboekVerhaal"></input>
             <button class="dagboekVerstuur">Verstuur</button>
             <button>Meer</button>
             <button>Edit</button>
@@ -86,6 +93,7 @@
             </div>
 
             <button type="submit">Bewerk</button>
+            <button class="BewerkTerug">Terug</button>
         </form>
     </div>
 </body>

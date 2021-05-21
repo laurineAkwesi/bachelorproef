@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/home.js"></script>
     <!-- <script src="../js/script.js"></script> -->
     <title>New user</title>
@@ -14,21 +16,26 @@
 
 <body>
     <header>
-        <nav class="header">
-            <img src="_assets/logo-02.png" class="logo">
-            <a href="home.html">Wie zijn we</a>
-            <a href="stoornissen.html">Stoornissen</a>
-            <a href="zoek_hulp.html" class="zoekHulpbutton">Zoek hulp</a>
-            <a href="profiel.html" id="navLogin">Login</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img src="_assets/logo-02.png" class="navbar-brand" width="130" height="150">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="home.html">wie zijn we</a>
+                    <a class="nav-item nav-link" href="stoornissen.html">Stoornissen</a>
+                    <a class="nav-item nav-link" href="zoek_hulp.html">Zoek hulp</a>
+                    <a class="nav-item nav-link" href="profiel.html">Login</a>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <div class="newUserForm">
+
+    <!--<div class="newUserForm">
         <form id="toevoegenForm">
-            <p class="newUserTitle">New user</p>
-            <!-- <input type='file' class="file">
+            <p class="newUserTitle">New user</p>-->
+    <!-- <input type='file' class="file">
         <br><img id="myImg" src="#" alt="your image"> -->
-            <div>
+    <!--<div>
                 <input type="text" placeholder="name" id="newName">
                 <input type="text" placeholder="lastname" id="newLastName">
             </div>
@@ -44,6 +51,43 @@
             </div>
 
             <button type="submit">Voeg toe</button>
+        </form>
+    </div>-->
+    <div class="newUserForm">
+        <form id="toevoegenForm">
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label>Voornaam</label>
+                    <input type="text" class="form-control" id="newName" placeholder="Voornaam" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Achternaam</label>
+                    <input type="text" class="form-control" id="newLastName" placeholder="Achternaam" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label>Username</label>
+                    <input type="text" class="form-control" id="newUsername" placeholder="Username" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Email</label>
+                    <input type="text" class="form-control" id="newEmail" placeholder="Email adress" value="Otto"
+                        required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label>Password</label>
+                    <input type="password" class="form-control" id="newPassword" placeholder="Password" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Password check</label>
+                    <input type="password" class="form-control" id="newPasswordCheck" placeholder="Password check"
+                        required>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Voeg Mij Toe</button>
         </form>
     </div>
 </body>
