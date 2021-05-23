@@ -33,9 +33,11 @@ const client = new MongoClient(uri, {
     useUnifiedTopology: true
 });
 let collection;
+let videoCollection
 
 client.connect(err => {
     collection = client.db("bachelorproef").collection("userinfo");
+    videoCollection = client.db("bachelorproef").collection("video");
     // perform actions on the collection object
     console.log('We are connected bitches');
     runProgram();
@@ -174,26 +176,40 @@ let runProgram = () => {
     })
 
 
-    app.post('/video', (req, res) => {
+    app.post('/postVideoComments/:videoid', (req, res) => {
         let username = req.body.username;
-        let videoId = req.body.videoId;
-        let comment = req.body.comment
-        collection.findOneAndUpdate({
-                videoId: parseInt(videoId)
+        let videoId = req.params.videoid;
+        let comment = req.body.comment;
+        let userId = req.body.userId;
+        //console.log(username, videoId, comment, userId)
+        videoCollection.findOneAndUpdate({
+            frontendVideoId: parseInt(videoId)
             }, {
                 $push: {
-                    "userId": userId,
-                    "commentId": Math.round(Math.random() * 100),
-                    "videoId": [{
-                        "videoId": videoId,
+                    "comment": {
                         "username": username,
+                        "userId": userId,
+                        "commentId": Math.round(Math.random() * 100),
                         "comment": comment
-                    }]
+                    }
                 }
             },
-            function (error, success) {
-                console.log("succes")
+            function (error, docs) {
+                //console.log(error)
+                res.send(docs);
             });
+    })
+
+    app.get('/videoComments/:videoid', (req, res) => {
+        //new collection! video
+        let videoId = req.params.videoid;
+        //console.log(parseInt(videoId))
+        videoCollection.find({
+            frontendVideoId: parseInt(videoId)
+        }).toArray(function (err, docs) {
+            //console.log(docs)
+            res.send(docs);
+        });
     })
 
 

@@ -1,11 +1,11 @@
 $(document).ready(function () {
     console.log('ready');
+    profiel();
     quote();
     login();
     newUser();
     stroornissen();
     zoekHulp();
-    profiel();
     dagboek();
     //dagboekShow();
 
@@ -24,6 +24,8 @@ $(document).ready(function () {
         $('.updateProfile').hide();
         $('.profielInfo').show();
     });
+
+    $("#navLogin").text("Login");
 
 });
 
@@ -194,6 +196,7 @@ function login() {
             success: function (data) {
                 console.log('added!')
                 let userId = data[0].userId
+                let username = data[0].username
                 //profiel(data)
 
                 if (data == false) {
@@ -289,6 +292,7 @@ function newUser() {
 
 
 function stroornissen() {
+    //GetVideoComments()
     console.log('hure');
     $.ajax({
         url: 'json/stoornissen.json',
@@ -297,14 +301,28 @@ function stroornissen() {
     }).done(function (data) {
         //console.log(data);
         for (let result of data.data) {
-            //console.log((result))
-            let div = $(`<div id= ${result.id} class="stoornisDiv d-flex justify-content-center">`);
-            let p = $(`<div id= ${result.id}>`);
+           //console.log((result))
+            let div = $(`<div id= ${result.id} class="d-flex justify-content-center align-items-center stoornisDiv">`);
+            let p = $(`<div id= ${result.id} class="d-inline p-2 stoornisText">`);
+            let divImgAppend = $(`<div id= ${result.id} class="divImg  d-inline p-2"">`);
+            let divImgPrepend = $(`<div id= ${result.id} class="divImg  d-inline p-2"">`);
 
+            $(`<img id= ${result.id} src= ${result.img} width="200" height="210">`).appendTo(divImgAppend);
+            $(`<img id= ${result.id} src= ${result.img} width="200" height="210">`).appendTo(divImgPrepend);
             $(`<h1 id= ${result.id}>`).text(`${result.onderwerp}`).appendTo(p);
             $(`<p id= ${result.id} class="stoornisDiscriptie">`).text(`${result.discriptie}`).appendTo(p);
             $(`<button id= ${result.id} class="btn btn-outline-danger infoButton">`).text(`meer info`).appendTo(p);
-            div.append(p);
+            div.append(p)
+
+            if (result.id % 2 === 0) {
+                div.append(divImgAppend);
+                $(".stoornisTextEven").css("margin-left", "10%")
+            } else{ 
+                div.prepend(divImgPrepend);
+                $(".stoornisTextOneven").css("margin-right", "10%")
+            }
+            /*div.append(divImgAppend);
+            div.prepend(divImgPrepend);*/
             $("#stoornis").append(div);
 
             /*if (result.id % 2 === 0) {
@@ -315,11 +333,15 @@ function stroornissen() {
             $(".stoornisDiv:even").addClass("even")
             $(".stoornisDiv:odd").addClass("oneven");
 
+            $(".stoornisText:even").addClass("stoornisTextEven")
+            $(".stoornisText:odd").addClass("stoornisTextOneven");
+
         }
 
         $('.infoButton').on("click", function () {
             let idStoornis = $(this).attr('id');
             stoornisDetail(idStoornis)
+            //video(idStoornis)
         })
     }).fail(function (err1, err2) {
         console.log(err1)
@@ -328,6 +350,7 @@ function stroornissen() {
 }
 
 function stoornisDetail(id) {
+    GetVideoComments(id)
     console.log(id);
     $('#stoornis').hide();
     $('.stoornisDetail').show();
@@ -342,18 +365,36 @@ function stoornisDetail(id) {
         for (let i = 0; i < spelerData.length; i += 1) {
             let result = spelerData[i];
             let cijfer = result.id;
-            //console.log(i)
+            //console.log(cijfer)
             if (cijfer == id) {
-                console.log(result.id + result.onderwerp);
-                let div = $(`<div class='detailStoornis' id= ${result.id}>`);
-                let video = $(`<video controls id= ${result.id}>`);
+                //console.log(result.id + result.onderwerp);
+                let div = $(`<div class='d-flex justify-content-around detailVideo' id= ${result.id}>`);
+                let textVideoDiv =$(`<div id= ${result.id} class="embed-responsive embed-responsive-16by9">`);
+                let videoDiv =$(`<div class='detailStoornis' id= ${result.id}>`);
+                let divTextarea = $(`<div id= ${result.id} class="divTextarea">`);
+                
+                let video = $(`<video class="embed-responsive-item" controls id= ${result.id}>`);
 
-                $(`<h1 id= ${result.id}>`).text(`${result.onderwerp}`).appendTo(div);
+                $(`<h1 id= ${result.id}>`).text(`${result.onderwerp}`).appendTo(videoDiv);
                 $(`<source src= ${result.video} type="video/mp4" id= ${result.id}>`).appendTo(video);
-                $(`<p id= ${result.id}>`).text(`${result.discriptie}`).appendTo(div);
-                $(`<button id= ${result.id} class="terugStroonis">`).text(`terug`).appendTo(div);
-                div.append(video)
-                $(".stoornisDetail").append(div);
+                $(`<textarea id= ${result.id} class="form-control form-control-sm divTextareaGetInput">`).appendTo(divTextarea);
+                $(`<button id= ${result.id} class="divTextareaButton">`).text(`Comment`).appendTo(divTextarea);
+                $(`<p id= ${result.id}>`).text(`${result.discriptie}`).appendTo(videoDiv);
+                $(`<button id= ${result.id} class="terugStroonis">`).text(`terug`).appendTo(videoDiv);
+                textVideoDiv.append(video)
+                div.append(textVideoDiv)
+                //div.append(video)
+                div.append(videoDiv)
+                $(".stoornisDetail").append(div).append(divTextarea);
+
+                /*let userid = localStorage.getItem("userId")
+                //console.log(id)
+                let video = {
+                    //username: $('#newUsername').val(),
+                    userId: userid,
+                    comment: $('textarea.divTextarea').val(),
+                    frontendVideoId: videoid
+                }*/
             }
         }
 
@@ -363,11 +404,79 @@ function stoornisDetail(id) {
             $('.stoornisDetail').empty()
         })
 
+        $('.divTextareaButton').on("click", function(){
+            console.log(id)
+            let comment = $(".divTextareaGetInput").val();
+            //console.log(comment, id);
+            PostVideoComments(comment, id)
+        })
+
+    }).fail(function (err1, err2) {
+        console.log(err1)
+        console.log(err2)
+    })
+/*get comments*/
+
+}
+
+function PostVideoComments(comment, videoid){
+    let userid = localStorage.getItem("userId")
+    $.ajax({
+        url: `http://localhost:63342/getUser/${userid}`,
+        type: 'GET',
+        dataType: 'json'
+    }).done(function (data) {
+        let username = data[0].username;
+    let video = {
+        username: username,
+        userId: userid,
+        comment: comment,
+        frontendVideoId: videoid
+    }
+    //console.log(video)
+    $.ajax({
+        url:`http://localhost:63342/postVideoComments/${videoid}`,
+        type: 'POST',
+        data: video,
+        success: function (data, e) {
+            //e.preventDefault()
+            //console.log(data)
+            //console.log('added!')
+            }
+        }).fail(function (err1, err2) {
+            console.log(err1)
+            console.log(err2)
+        })
+    })
+}
+
+function GetVideoComments(videoid){
+    $.ajax({
+        url: `http://localhost:63342/videoComments/${videoid}`,
+        type: 'GET',
+        dataType: 'json',
+    }).done(function (data) {
+        console.log(data);
     }).fail(function (err1, err2) {
         console.log(err1)
         console.log(err2)
     })
 
+
+    /*$.ajax({
+        url: "http://localhost:63342/video",
+        type: 'POST',
+        data: video,
+        success: function (data, e) {
+            e.preventDefault()
+            console.log(data)
+            console.log('added!')
+            //window.location.href = 'login.html';
+        }
+    }).fail(function (err1, err2) {
+        console.log(err1)
+        console.log(err2)
+    })*/
 }
 
 function zoekHulp() {
@@ -380,14 +489,12 @@ function zoekHulp() {
         //console.log(data);
         for (let result of data.data) {
             //console.log((result))
-            let div = $(`<div class='hulpDiv' id= ${result.id}>`);
-            let p = $(`<p id= ${result.id}>`);
+            let div = $(`<div class='col zoekHulpDiv' id= ${result.id}>`);
 
-            $(`<h1 id= ${result.id}>`).text(`${result.centra}`).appendTo(p);
-            $(`<p id= ${result.id}>`).text(`${result.discriptie}`).appendTo(p);
-            $(`<button id= ${result.id} class="zoekHulpbutton">`).text(`meer info`).appendTo(p);
-            div.append(p);
-            $(".zoekHulp").append(div);
+            $(`<h1 id= ${result.id}>`).text(`${result.centra}`).appendTo(div);
+            $(`<p id= ${result.id}>`).text(`${result.discriptie}`).appendTo(div);
+            $(`<button id= ${result.id} class="zoekHulpbutton btn btn-primary">`).text(`meer info`).appendTo(div);
+            $(".zoekHulpText").append(div);
         }
 
         $('.zoekHulpbutton').on("click", function () {
@@ -421,7 +528,7 @@ function zoekHulpDetail(id) {
 
                 $(`<h1 id= ${result.id}>`).text(`${result.centra}`).appendTo(div);
                 $(`<p id= ${result.id}>`).text(`${result.discriptie}`).appendTo(div);
-                $(`<button id= ${result.id} class="terugHulp">`).text(`terug`).appendTo(div);
+                $(`<button id= ${result.id} class="terugHulp btn btn-primary">`).text(`terug`).appendTo(div);
                 $(".zoekHulpDetail").append(div);
             }
         }

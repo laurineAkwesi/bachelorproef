@@ -25,11 +25,13 @@ p,
 text,
 a {
     font-family: Montserrat;
+    font-size: 11pt;
 }
 
 .nav-item {
     margin-right: 10em;
     text-transform: uppercase;
+    font-weight: bold;
     padding: 0;
     color: #000;
 }
@@ -40,7 +42,7 @@ a {
 
 .thumbnail {
     position: relative;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
 }
 
 .caption {
@@ -59,21 +61,80 @@ a {
 }
 
 .even {
-    text-align: left;
-    float: left;
-    width: 45%;
-    padding-left: 10%;
-    margin: 5%;
+    background-image: url("../_assets/Path\ 261.png");
+    height: 600px;
+    /* You must set a specified height */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: 80%;
 }
 
-.oneven {
+.WatDoenWe {
+    margin-right: 5%;
+}
+
+.wieZijnWe {
+    margin-left: 5%;
+}
+
+.zoekHulpbutton {
+    background-color: #F69FA1;
+    border: none;
+}
+
+.zoekHulp h1 {
+    text-align: center;
+}
+
+.zoekHulpbutton:hover {
+    color: #F69FA1;
+    border: solid 1px #F69FA1;
+    background-color: white;
+}
+
+/*.oneven {
     text-align: right;
     float: right;
-    width: 45%;
+    width: 60%;
     padding-right: 10%;
     margin: 5%;
+}*/
+
+.stoornisText {
+    width: 40%;
+    font-size: 11pt;
 }
 
+.stoornisDiv {
+    margin-bottom: 10%;
+}
+
+.detailStoornis {
+    width: 50%;
+    margin-left: 10%;
+}
+
+.divTextarea {
+    width: 80%;
+}
+
+.detailVideo {
+    margin: 2% 10%;
+}
+
+.zoekHulpText {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 300px 300px;
+    grid-column-gap: 100px;
+    grid-row-gap: 10px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/*
 p.stoornisDiv {
     width: 70%;
     padding: 20%;
@@ -86,6 +147,10 @@ p.stoornisDiv {
 .stoornisDiscriptie {
     margin: 5% 0;
 }
+
+.divImg {
+    margin-bottom: ;
+}*/
 
 /*.header {
     width: 100%;
