@@ -6,7 +6,6 @@ $(document).ready(function () {
     newUser();
     stroornissen();
     zoekHulp();
-    dagboek();
     //dagboekShow();
 
     $('.stoornisDetail').hide();
@@ -81,8 +80,9 @@ function profiel() {
 
         $(".dagboekButton").on("click", function () {
             $('.dagboek').show();
-            dagboekShow(data)
+            dagboek(data)
             //dagboekShow();
+            //dagboek(data);
         })
 
         $(".bewerk").on("click", function () {
@@ -112,8 +112,35 @@ function logOut() {
     })
 }
 
-function dagboek() {
+function dagboek(userData) {
+    //console.log(userData)
     let userid = localStorage.getItem("userId")
+
+    $.ajax({
+        url: `http://localhost:63342/userDagboek/${userid}`,
+        type: 'GET',
+        dataType: 'json',
+    }).done(function (data) {
+        //console.log(data);
+        let dataDagboek = data[0].dagboek
+        for (let dag of dataDagboek) {
+            //console.log(dag)
+            //let dag = result[i]
+            //console.log(dag)
+            let div = $(`<div class='verhaal' id= ${dag.verhaalId}>`);
+    
+            $(`<p type=text id= ${dag.verhaalId}>`).text(`Titel: ${dag.titel}`).appendTo(div)
+            $(`<p type=text id= ${dag.verhaalId}>`).text(`verhaal: ${dag.verhaal}`).appendTo(div);
+    
+            $(".dagboekContent").append(div);
+    
+        }
+
+    }).fail(function (err1, err2) {
+        console.log(err1)
+        console.log(err2)
+    })
+
     $('.dagboekVerstuur').on("click", function (e) {
         e.preventDefault()
         let verhaalInfo = {
@@ -128,18 +155,7 @@ function dagboek() {
             success: function (response) {
                 response = response.value.dagboek
                 console.log(response)
-                //gets last array element
-                //console.log(response.slice(-1)[0])
-
-                //let dag = result[i]
-                //console.log(dag)
-                /*let div = $(`<div class='verhaal' id= ${response.verhaalId}>`);
-
-                $(`<p type=text id= ${response.verhaalId}>`).text(`Titel: ${response.titel}`).appendTo(div)
-                $(`<p type=text id= ${response.verhaalId}>`).text(`verhaal: ${response.verhaal}`).appendTo(div);
-
-                $(".dagboekContent").append(div);*/
-
+                dagboekShow(userData)
             }
         })
     })
@@ -151,6 +167,32 @@ function dagboek() {
 }
 
 function dagboekShow(userData) {
+    let userid = localStorage.getItem("userId")
+    $.ajax({
+        url: `http://localhost:63342/userDagboek/${userid}`,
+        type: 'GET',
+        dataType: 'json',
+    }).done(function (data) {
+        console.log(data[0].dagboek);
+        $(".verhaal").empty()
+        let dataDagboek = data[0].dagboek
+        for (let dag of dataDagboek) {
+            //console.log(dag)
+            //let dag = result[i]
+            //console.log(dag)
+            let div = $(`<div class='verhaal' id= ${dag.verhaalId}>`);
+    
+            $(`<p type=text id= ${dag.verhaalId}>`).text(`Titel: ${dag.titel}`).appendTo(div)
+            $(`<p type=text id= ${dag.verhaalId}>`).text(`verhaal: ${dag.verhaal}`).appendTo(div);
+    
+            $(".dagboekContent").append(div);
+    
+        }
+    }).fail(function (err1, err2) {
+        console.log(err1)
+        console.log(err2)
+    })
+    /*console.log(userData)
     let userid = localStorage.getItem("userId")
     //let result = userData[0].dagboek;
     let data = userData[0].dagboek
@@ -166,7 +208,7 @@ function dagboekShow(userData) {
 
         $(".dagboekContent").append(div);
 
-    }
+    }*/
 }
 
 function login() {
@@ -407,8 +449,10 @@ function stoornisDetail(id) {
         $('.divTextareaButton').on("click", function(){
             console.log(id)
             let comment = $(".divTextareaGetInput").val();
+            $(".divTextareaGetInput").val('');
             //console.log(comment, id);
             PostVideoComments(comment, id)
+            //GetVideoComments(id)
         })
 
     }).fail(function (err1, err2) {
@@ -426,6 +470,7 @@ function PostVideoComments(comment, videoid){
         type: 'GET',
         dataType: 'json'
     }).done(function (data) {
+        console.log(data)
         let username = data[0].username;
     let video = {
         username: username,
@@ -442,6 +487,31 @@ function PostVideoComments(comment, videoid){
             //e.preventDefault()
             //console.log(data)
             //console.log('added!')
+            GetVideoComments(videoid)
+            }
+        }).fail(function (err1, err2) {
+            console.log(err1)
+            console.log(err2)
+        })
+
+        $.ajax({
+            url: `http://localhost:63342/videoComments/${videoid}`,
+            type: 'GET',
+            dataType: 'json',
+        }).done(function (data) {
+            console.log(data[0].comment);
+            let dataComment = data[0].comment
+            for (let comment of dataComment) {
+                //console.log(dag)
+                //let dag = result[i]
+                //console.log(dag)
+                let div = $(`<div class='comment' id= ${comment.commentId}>`);
+        
+                $(`<p type=text id= ${comment.commentId}>`).text(`username: ${comment.username}`).appendTo(div)
+                $(`<p type=text id= ${comment.commentId}>`).text(`comment: ${comment.comment}`).appendTo(div);
+        
+                $(".divTextarea").append(div);
+        
             }
         }).fail(function (err1, err2) {
             console.log(err1)
@@ -456,27 +526,26 @@ function GetVideoComments(videoid){
         type: 'GET',
         dataType: 'json',
     }).done(function (data) {
-        console.log(data);
-    }).fail(function (err1, err2) {
-        console.log(err1)
-        console.log(err2)
-    })
-
-
-    /*$.ajax({
-        url: "http://localhost:63342/video",
-        type: 'POST',
-        data: video,
-        success: function (data, e) {
-            e.preventDefault()
-            console.log(data)
-            console.log('added!')
-            //window.location.href = 'login.html';
+        $(".comment").empty()
+        console.log(data[0].comment);
+        //console.log(data[0]);
+        let dataComment = data[0].comment
+        for (let comment of dataComment) {
+            //console.log(dag)
+            //let dag = result[i]
+            //console.log(dag)
+            let div = $(`<div class='comment' id= ${comment.commentId}>`);
+    
+            $(`<p type=text id= ${comment.commentId}>`).text(`username: ${comment.username}`).appendTo(div)
+            $(`<p type=text id= ${comment.commentId}>`).text(`comment: ${comment.comment}`).appendTo(div);
+    
+            $(".divTextarea").append(div);
+    
         }
     }).fail(function (err1, err2) {
         console.log(err1)
         console.log(err2)
-    })*/
+    })
 }
 
 function zoekHulp() {
