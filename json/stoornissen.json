@@ -3,8 +3,25 @@
       "id": 1,
       "onderwerp": "Depressie",
       "video": "mp4",
-      "img": "../_assets/logo-02.png",
-      "discriptie": "Iedereen heeft wel eens een dipje of voelt zich even down. Dat is heel normaal, niet elke dag is even prettig. Maar als je verschillende weken of maanden nergens nog zin in hebt en de droevige gevoelens blijven duren, is er kans op een depressie. Niets interesseert je nog. Alles lijkt somber. Een depressie duurt een tijdje. Het is niet zomaar een dagje triest zijn."
+      "img": "../_assets/depressie.png",
+      "discriptie": "Iedereen heeft wel eens een dipje of voelt zich even down. Dat is heel normaal, niet elke dag is even prettig. Maar als je verschillende weken of maanden nergens nog zin in hebt en de droevige gevoelens blijven duren, is er kans op een depressie. Niets interesseert je nog. Alles lijkt somber. Een depressie duurt een tijdje. Het is niet zomaar een dagje triest zijn.",
+      "meerInfo": "Een depressie kan je voelen in je hoofd. Je kan droevig zijn, je wanhopig voelen, jezelf niet goed genoeg vinden, nergens zin in hebben, schuldgevoelens hebben, negatief denken, … Ook je lichaam vertelt je dat er iets mis is. Je wil altijd slapen of je kan net niet goed slapen, je eetlust is verdwenen, je ben altijd moe, je hebt geen energie meer, … break break Het is moeilijk te zeggen waarom iemand depressief is. Meestal komt het niet door één ding. Vaak is het een combinatie van zaken in je lichaam, hoofd en je omgeving. break break In je lichaam kan je bijvoorbeeld te weinig stoffen hebben van iets, te weinig vitaminen hebben, teveel alcohol of drugs gebruiken, …. break break Dingen in je hoofd die kunnen maken dat je depressief wordt, zijn bijvoorbeeld: te weinig zelfvertrouwen hebben, heel perfectionistisch zijn, angst hebben om iets niet goed te doen, …. break break In je omgeving kunnen er dingen gebeuren waardoor je depressieve gevoelens krijgt, zoals problemen thuis, een overlijden van iemand die je goed kent, ernstige conflicten op school, …. break break Als je depressief bent, heb je geen energie meer. Het is moeilijker om iets te ondernemen. Toch is het belangrijk dat je er met iemand over praat. Je huisdokter bijvoorbeeld of de mensen van het CLB of het JAC helpen je hier graag mee verder. Weet je niet goed hoe beginnen? Bereid je voor met de handleiding om hulp te vragen."
+    },
+    {
+      "id": 4,
+      "onderwerp": "Angststoornis",
+      "video": "mp4",
+      "img": "../_assets/angst.png",
+      "discriptie": "Bang zijn of angst hebben wordt een probleem als de angst je verlamt. Door je angst ga je je anders voelen, anders denken en misschien zelfs anders gedragen. Als angst de baas wordt in jouw leven spreken we van een angststoornis.",
+      "meerInfo": "Iedereen is wel eens bang. Bang om in het donker buiten te lopen, bang om voor een groep te spreken, bang voor de dood, …. Af en toe bang zijn is dus helemaal normaal. Bij een angststoornis bent bang dat er iets vreselijks zal gebeuren met je lichaam. Bovendien wordt die angst nog sterker omdat je bang bent voor de reacties van je lichaam. Bijvoorbeeld je hart dat heel snel klopt, zweten, misselijk zijn, niet goed kunnen ademen, duizelig zijn, pijn in de borst, het idee hebben dat je gaat stikken, het enorm koud/warm krijgen, buikpijn hebben, het gevoel hebben dat je niet meer jezelf bent, … (Paniekaanval). Soms ben je zo angstig dat je dingen niet meer gaat doen. Dat is een normale, menselijke reactie. Voor eventjes kan het wel helpen, maar je kan niet je hele leven weglopen voor je angst. Op een bepaald moment staat die toch weer voor je neus."
+    },
+    {
+      "id": 5,
+      "onderwerp": "Eetstoornis",
+      "video": "mp4",
+      "img": "../_assets/eetstoornis.png",
+      "discriptie": "Wanneer je kampt met een eetstoornis, begint eten de baas te worden over je leven. Je bent voortdurend bezig met je gewicht of met je volgende maaltijd of tussendoortje.",
+      "meerInfo": "Iedereen heeft wel eens moeite om te eten, let eens op zijn voeding of eet eens wat meer dan gewoonlijk. Daar kunnen allerlei redenen voor zijn: je wil wat kilo’s kwijt, je voelt je ziek waardoor je minder zin hebt om te eten, je hebt veel etentjes tijdens de feestdagen, …. Als je problemen hebt met eten wil dat niet meteen zeggen dat je een eetstoornis hebt. Er bestaan 3 soorten eetstoonissen: Anorexianervosa Deze eetstoornis herken je aan de grote angst om dikker te worden. Jongeren met deze eetstoornis eten heel weinig en zijn als het ware verslaafd aan gewicht verliezen. Dit doen ze door weinig te eten, te braken of middelen te nemen om vaker naar het toilet te moeten gaan. Ze zullen hun eetgedrag en de gevolgen hiervan op hun lichaam proberen verborgen te houden, omdat ze weten dat de mensen rond hen dit extreme lijnen afkeuren. Sommige mensen beginnen ook heel fanatiek te sporten om gewicht te verliezen. Ze gaan bijvoorbeeld elke dag 10 km lopen of 100 baantjes trekken in het zwembad. BoulimiaNervosa: Bij deze eetstoornis kamp je met extreme eetbuien. Ook al is de honger over en zit je eigenlijk helemaal vol, toch blijf je verder eten. Na zo een eetbui voel je je vaak wel schuldig en zwak. Je probeert het gewicht dan ook zo snel mogelijk weer kwijt te geraken, bijvoorbeeld door heel hard te vasten, te braken of door middeltjes te gebruiken om sneller naar het toilet te moeten gaan. Hoewel jongeren met boulimia niet altijd te zwaar zijn, vinden ze zichzelf toch altijd te dik. Bingeeatingdisorder: Jongeren met een binge eating disorder hebben regelmatig last van vreetbuien. Net als bij boulimia eet je enorm veel, ook als je honger eigenlijk al gestild is. Het verschil met boulimia is dat jongeren met een binge eating disorder achteraf niet proberen om gewicht kwijt te geraken. Al deze eetstoornissen kunnen gevolgen hebben voor je lichaam én je hoofd. Zo kan het bijvoorbeeld zijn dat je hart sneller of trager gaat slaan, je niet meer menstrueert, je misselijk bent, je huid droog wordt, je niet meer graag buiten komt, je je onbegrepen voelt, je je eenzaam voelt, …. Je hebt een grote angst om bij te komen en vaak worden hongergevoelens of het gevoel genoeg gegeten te hebben gewoon genegeerd. Je blijft jezelf ook te dik vinden, zelfs wanneer je gewicht ver onder een gezond gewicht is gekomen."
     },
     {
       "id": 2,
@@ -12,27 +29,6 @@
       "video": "mp4",
       "img": "../_assets/logo-02.png",
       "discriptie": "Bij een dwangstoornis heeft u steeds gedachten die u eigenlijk niet wilt hebben. Deze gedachten komen steeds terug. Bij die dwanggedachten horen vaak dwanghandelingen: u moet van uzelf steeds bepaalde dingen doen. En u moet dat steeds volgens vaste regels doen. U bent bang dat er iets ergs gebeurt als u die dingen niet doet. Ook heeft u het gevoel dat u minder somber en minder bang wordt door steeds die dingen te doen."
-    },
-    {
-      "id": 3,
-      "onderwerp": "Post-traumatisch stresstoornis",
-      "video": "mp4",
-      "img": "../_assets/logo-02.png",
-      "discriptie": "Posttraumatische stressstoornis of PTSS is een psychische aandoening die kan ontstaan na het meemaken van schokkende, traumatische ervaringen. Patiënten ervaren langdurig psychische gevolgen van deze ervaringen. PTSS heeft grote gevolgen voor het dagelijks functioneren."
-    },
-    {
-      "id": 4,
-      "onderwerp": "Angststoornis",
-      "video": "mp4",
-      "img": "../_assets/logo-02.png",
-      "discriptie": "Je bent bang dat er iets vreselijks zal gebeuren met je lichaam. Bovendien wordt die angst nog sterker omdat je bang bent voor de reacties van je lichaam. Bijvoorbeeld je hart dat heel snel klopt, zweten, misselijk zijn, niet goed kunnen ademen, duizelig zijn, pijn in de borst, het idee hebben dat je gaat stikken, het enorm koud/warm krijgen, buikpijn hebben, het gevoel hebben dat je niet meer jezelf bent, … (Paniekaanval)."
-    },
-    {
-      "id": 5,
-      "onderwerp": "Eetstoornis",
-      "video": "mp4",
-      "img": "../_assets/logo-02.png",
-      "discriptie": "Iedereen heeft wel eens moeite om te eten, let eens op zijn voeding of eet eens wat meer dan gewoonlijk. Daar kunnen allerlei redenen voor zijn: je wil wat kilo’s kwijt, je voelt je ziek waardoor je minder zin hebt om te eten, je hebt veel etentjes tijdens de feestdagen, …. Als je problemen hebt met eten wil dat niet meteen zeggen dat je een eetstoornis hebt Wanneer je kampt met een eetstoornis, begint eten de baas te worden over je leven.Je bent voortdurend bezig met je gewicht of met je volgende maaltijd of tussendoortje."
     }
   ]
 }

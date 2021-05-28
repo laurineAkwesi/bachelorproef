@@ -10,7 +10,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/home.js"></script>
-    <!-- <script src="../js/script.js"></script> -->
+    <link rel="icon" href="_assets/logo-02.png" type="image/png" />
     <title>New user</title>
 </head>
 
@@ -20,74 +20,51 @@
             <img src="_assets/logo-02.png" class="navbar-brand" width="130" height="150">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="home.html">wie zijn we</a>
-                    <a class="nav-item nav-link" href="stoornissen.html">Stoornissen</a>
-                    <a class="nav-item nav-link" href="zoek_hulp.html">Zoek hulp</a>
+                    <a class="nav-item nav-link" href="home.html" id="navHome">wie zijn we</a>
+                    <a class="nav-item nav-link" href="stoornissen.html" id="navStoornissen">Stoornissen</a>
+                    <a class="nav-item nav-link" href="zoek_hulp.html" id="navZoekHulp">Zoek hulp</a>
                     <a class="nav-item nav-link" href="profiel.html" id="navLogin"></a>
                 </div>
             </div>
         </nav>
     </header>
 
-
-    <!--<div class="newUserForm">
-        <form id="toevoegenForm">
-            <p class="newUserTitle">New user</p>-->
-    <!-- <input type='file' class="file">
-        <br><img id="myImg" src="#" alt="your image"> -->
-    <!--<div>
-                <input type="text" placeholder="name" id="newName">
-                <input type="text" placeholder="lastname" id="newLastName">
-            </div>
-
-            <div>
-                <input type="text" placeholder="username" id="newUsername">
-                <input type="text" placeholder="email" id="newEmail">
-            </div>
-
-            <div>
-                <input type="password" placeholder="password" id="newPassword">
-                <input type="password" placeholder="password Check" id="newPasswordCheck">
-            </div>
-
-            <button type="submit">Voeg toe</button>
-        </form>
-    </div>-->
     <div class="newUserForm">
+        <h1>Nieuwe user</h1>
         <form id="toevoegenForm">
-            <div class="form-row">
-                <div class="col-md-4 mb-3">
+            <div class="row">
+                <div class="col">
                     <label>Voornaam</label>
                     <input type="text" class="form-control" id="newName" placeholder="Voornaam" required>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col">
                     <label>Achternaam</label>
                     <input type="text" class="form-control" id="newLastName" placeholder="Achternaam" required>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="col-md-4 mb-3">
+            <div class="row">
+                <div class="col">
                     <label>Username</label>
                     <input type="text" class="form-control" id="newUsername" placeholder="Username" required>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col">
                     <label>Email</label>
-                    <input type="text" class="form-control" id="newEmail" placeholder="Email adress" value="Otto"
+                    <input type="text" class="form-control" id="newEmail" placeholder="Email adress"
                         required>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="col-md-4 mb-3">
+            <div class="row">
+                <div class="col">
                     <label>Password</label>
                     <input type="password" class="form-control" id="newPassword" placeholder="Password" required>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col">
                     <label>Password check</label>
                     <input type="password" class="form-control" id="newPasswordCheck" placeholder="Password check"
                         required>
                 </div>
             </div>
-            <button class="btn btn-primary" type="submit">Voeg Mij Toe</button>
+            <button class="btn btn-primary voegToe" type="submit">Voeg Mij Toe</button>
         </form>
     </div>
 </body>

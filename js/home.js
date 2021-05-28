@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     $('.stoornisDetail').hide();
     $('.zoekHulpDetail').hide();
-    $('.profielInfo').hide();
+    $('.profiel').hide();
     $('.dagboek').hide();
     $('.updateProfile').hide();
 
@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     $('.BewerkTerug').on('click', function () {
         $('.updateProfile').hide();
-        $('.profielInfo').show();
+        $('.profiel').show();
     });
 
     $("#navLogin").text("Login");
@@ -37,7 +37,7 @@ function quote() {
         //console.log(data);
         let randomQuote = Math.floor((Math.random() * 100) + 1);
         let quote = data[randomQuote];
-        console.log(quote.text);
+        //console.log(quote.text);
         $(`<p class='quote'>`).text(`${quote.text}`).appendTo('.caption');
         $(`<p class='author'>`).text(`- ${quote.author} -`).appendTo('.caption');
     })
@@ -63,17 +63,17 @@ function profiel() {
             $("#navLogin").empty();
             $("#navLogin").text("profiel");
             $(".loginForm").hide()
-            $('.profielInfo').show();
+            $('.profiel').show();
 
-            let div = $(`<div class='userProfiel' id= ${result.id}>`);
+            let div = $(`<div class='userProfiel' id= ${result.userId}>`);
 
-            $(`<p type=text id= ${result.userId}>`).text(`Username: ${result.username}`).appendTo(div)
-            $(`<p type=text id= ${result.userId}>`).text(`Naam: ${result.name}`).appendTo(div);
-            $(`<p type=text id= ${result.userId}>`).text(`Achternaam: ${result.lastname}`).appendTo(div);
-            $(`<p type=text id= ${result.userId}>`).text(`Email: ${result.email}`).appendTo(div);
-            $(`<button type="button" class="bewerk" id= ${result.userId}>`).text('update').appendTo(div);
-            $(`<button type="button" class="logOut" id= ${result.userId}>`).text('logOut').appendTo(div);
-            $(`<button type="button" class="dagboekButton" id= ${result.userId}>`).text('Dagboek').appendTo(div);
+            $(`<h2 type=text id= ${result.userId} userInfo>`).text(`${result.username}`).appendTo(div)
+            $(`<p type=text id= ${result.userId}>`).text(`${result.name}`).appendTo(div);
+            $(`<p type=text id= ${result.userId}>`).text(`${result.lastname}`).appendTo(div);
+            $(`<p type=text id= ${result.userId}>`).text(`${result.email}`).appendTo(div);
+            $(`<button type="button" class="bewerk btn btn-primary" id= ${result.userId}>`).text('Update').appendTo(div);
+            $(`<button type="button" class="logOut btn btn-warning" id= ${result.userId}>`).text('Log Out').appendTo(div);
+            $(`<button type="button" class="dagboekButton btn btn-success" id= ${result.userId}>`).text('Dagboek').appendTo(div);
 
             $(".profielInfo").append(div);
         }
@@ -81,6 +81,7 @@ function profiel() {
         $(".dagboekButton").on("click", function () {
             $('.dagboek').show();
             dagboek(data)
+            $('.profiel').hide()
             //dagboekShow();
             //dagboek(data);
         })
@@ -106,14 +107,14 @@ function logOut() {
         type: 'GET',
         dataType: 'json'
     }).done(function (data) {
-        console.log(data);
+        //console.log(data);
         window.localStorage.clear();
         window.location.href = "home.html";
     })
 }
 
 function dagboek(userData) {
-    //console.log(userData)
+    let username = userData[0].username
     let userid = localStorage.getItem("userId")
 
     $.ajax({
@@ -129,10 +130,11 @@ function dagboek(userData) {
             //console.log(dag)
             let div = $(`<div class='verhaal' id= ${dag.verhaalId}>`);
     
-            $(`<p type=text id= ${dag.verhaalId}>`).text(`Titel: ${dag.titel}`).appendTo(div)
-            $(`<p type=text id= ${dag.verhaalId}>`).text(`verhaal: ${dag.verhaal}`).appendTo(div);
-    
-            $(".dagboekContent").append(div);
+            $(`<label class="font-weight-bold">`).text(username).appendTo(div)
+            $(`<h5 class= type=text id= ${dag.verhaalId}>`).text(`${dag.titel}`).appendTo(div)
+            $(`<p type=text id= ${dag.verhaalId}>`).text(`${dag.verhaal}`).appendTo(div);
+
+            $(".dagboekAppendVerhaal").append(div);
     
         }
 
@@ -167,6 +169,7 @@ function dagboek(userData) {
 }
 
 function dagboekShow(userData) {
+    console.log(userData)
     let userid = localStorage.getItem("userId")
     $.ajax({
         url: `http://localhost:63342/userDagboek/${userid}`,
@@ -182,45 +185,20 @@ function dagboekShow(userData) {
             //console.log(dag)
             let div = $(`<div class='verhaal' id= ${dag.verhaalId}>`);
     
-            $(`<p type=text id= ${dag.verhaalId}>`).text(`Titel: ${dag.titel}`).appendTo(div)
-            $(`<p type=text id= ${dag.verhaalId}>`).text(`verhaal: ${dag.verhaal}`).appendTo(div);
-    
-            $(".dagboekContent").append(div);
+            $(`<label class="font-weight-bold">`).text(username).appendTo(div)
+            $(`<h3 type=text id= ${dag.verhaalId}>`).text(`${dag.titel}`).appendTo(div)
+            $(`<p type=text id= ${dag.verhaalId}>`).text(`${dag.verhaal}`).appendTo(div);
+
+            $(".dagboekAppendVerhaal").append(div);
     
         }
     }).fail(function (err1, err2) {
         console.log(err1)
         console.log(err2)
     })
-    /*console.log(userData)
-    let userid = localStorage.getItem("userId")
-    //let result = userData[0].dagboek;
-    let data = userData[0].dagboek
-
-    for (let dag of data) {
-        //console.log(dag)
-        //let dag = result[i]
-        //console.log(dag)
-        let div = $(`<div class='verhaal' id= ${dag.verhaalId}>`);
-
-        $(`<p type=text id= ${dag.verhaalId}>`).text(`Titel: ${dag.titel}`).appendTo(div)
-        $(`<p type=text id= ${dag.verhaalId}>`).text(`verhaal: ${dag.verhaal}`).appendTo(div);
-
-        $(".dagboekContent").append(div);
-
-    }*/
 }
 
 function login() {
-    /*$('.loginFormulier').hide();
-    $('.login').on('click', function () {
-        $('.loginFormulier').show();
-        $('.profielInfo').hide();
-        $('.dagboek').hide();
-        $('.dagboekbutton').hide();
-    });
-
-    $('.updateProfile').hide()*/
     $("form.login").submit(function (e) {
         let user = {
             username: $('#username').val(),
@@ -229,7 +207,7 @@ function login() {
         //$('#username').val('')
         //$('#password').val('')
         e.preventDefault();
-        console.log("pressed");
+        //console.log("pressed");
         //console.log(user)
         $.ajax({
             url: "http://localhost:63342/login",
@@ -257,6 +235,7 @@ function login() {
 }
 
 function updateData() {
+    $('.profiel').hide()
     let userid = localStorage.getItem("userId")
     $.ajax({
         url: `http://localhost:63342/getUser/${userid}`,
@@ -287,7 +266,7 @@ function updateData() {
                 type: "PUT",
                 data: userupdate,
                 success: function (data) {
-                    //window.location.href = "profile.html";
+                    window.location.href = "profiel.html";
                     console.log('updated!')
                     console.log(data)
 
@@ -302,9 +281,13 @@ function updateData() {
 
 
 function newUser() {
-    console.log("newUser")
+    //console.log("newUser")
     $('form#toevoegenForm').submit(function (e) {
         e.preventDefault()
+        let password = $('#newPassword').val()
+        let passwordCheck = $('#newPasswordCheck').val()
+        if(password === passwordCheck){
+            window.location.href = 'profiel.html';
         let newUser = {
             username: $('#newUsername').val(),
             name: $('#newName').val(),
@@ -323,19 +306,21 @@ function newUser() {
                 e.preventDefault()
                 console.log(data)
                 console.log('added!')
-                //window.location.href = 'login.html';
             }
         }).fail(function (err1, err2) {
             console.log(err1)
             console.log(err2)
         })
+    }else{
+       
+    }
     });
 }
 
 
 function stroornissen() {
     //GetVideoComments()
-    console.log('hure');
+    //console.log('hure');
     $.ajax({
         url: 'json/stoornissen.json',
         type: 'GET',
@@ -353,7 +338,7 @@ function stroornissen() {
             $(`<img id= ${result.id} src= ${result.img} width="200" height="210">`).appendTo(divImgPrepend);
             $(`<h1 id= ${result.id}>`).text(`${result.onderwerp}`).appendTo(p);
             $(`<p id= ${result.id} class="stoornisDiscriptie">`).text(`${result.discriptie}`).appendTo(p);
-            $(`<button id= ${result.id} class="btn btn-outline-danger infoButton">`).text(`meer info`).appendTo(p);
+            $(`<button id= ${result.id} class="btn btn-outline-danger infoButton">`).text(`Meer info`).appendTo(p);
             div.append(p)
 
             if (result.id % 2 === 0) {
@@ -363,8 +348,7 @@ function stroornissen() {
                 div.prepend(divImgPrepend);
                 $(".stoornisTextOneven").css("margin-right", "10%")
             }
-            /*div.append(divImgAppend);
-            div.prepend(divImgPrepend);*/
+
             $("#stoornis").append(div);
 
             /*if (result.id % 2 === 0) {
@@ -407,27 +391,32 @@ function stoornisDetail(id) {
         for (let i = 0; i < spelerData.length; i += 1) {
             let result = spelerData[i];
             let cijfer = result.id;
-            //console.log(cijfer)
+            //console.log(result)
             if (cijfer == id) {
+
+                //https://stackoverflow.com/questions/19873002/how-to-replace-all-spaces-in-a-string/19873010
+                let breakResult = result.meerInfo
+                let res = breakResult.replace(/break/g, "<br>");
+
                 //console.log(result.id + result.onderwerp);
                 let div = $(`<div class='d-flex justify-content-around detailVideo' id= ${result.id}>`);
-                let textVideoDiv =$(`<div id= ${result.id} class="embed-responsive embed-responsive-16by9">`);
+                let textVideoDiv =$(`<div id= ${result.id} class="embed-responsive embed-responsive-16by9 video">`);
                 let videoDiv =$(`<div class='detailStoornis' id= ${result.id}>`);
                 let divTextarea = $(`<div id= ${result.id} class="divTextarea">`);
-                
+                let titel = $(`<div id= ${result.id}>`);
                 let video = $(`<video class="embed-responsive-item" controls id= ${result.id}>`);
 
-                $(`<h1 id= ${result.id}>`).text(`${result.onderwerp}`).appendTo(videoDiv);
+                $(`<h1 id= ${result.id} class="text-uppercase stoornisTitel">`).text(`${result.onderwerp}`).appendTo(titel);
                 $(`<source src= ${result.video} type="video/mp4" id= ${result.id}>`).appendTo(video);
-                $(`<textarea id= ${result.id} class="form-control form-control-sm divTextareaGetInput">`).appendTo(divTextarea);
-                $(`<button id= ${result.id} class="divTextareaButton">`).text(`Comment`).appendTo(divTextarea);
-                $(`<p id= ${result.id}>`).text(`${result.discriptie}`).appendTo(videoDiv);
-                $(`<button id= ${result.id} class="terugStroonis">`).text(`terug`).appendTo(videoDiv);
+                $(`<textarea id= ${result.id} class="form-control form-control-sm divTextareaGetInput" placeholder="Doe je verhaal..." required>`).appendTo(divTextarea);
+                $(`<button id= ${result.id} class="divTextareaButton btn">`).text(`Comment`).appendTo(divTextarea);
+                $(`<p id= ${result.id}>`).html(`${res}`).appendTo(videoDiv);
+                $(`<button id= ${result.id} class="terugStroonis btn btn-outline-success">`).text(`Terug`).appendTo(titel);
                 textVideoDiv.append(video)
                 div.append(textVideoDiv)
                 //div.append(video)
                 div.append(videoDiv)
-                $(".stoornisDetail").append(div).append(divTextarea);
+                $(".stoornisDetail").append(titel).append(div).append(divTextarea);
 
                 /*let userid = localStorage.getItem("userId")
                 //console.log(id)
@@ -494,7 +483,7 @@ function PostVideoComments(comment, videoid){
             console.log(err2)
         })
 
-        $.ajax({
+        /*$.ajax({
             url: `http://localhost:63342/videoComments/${videoid}`,
             type: 'GET',
             dataType: 'json',
@@ -516,17 +505,18 @@ function PostVideoComments(comment, videoid){
         }).fail(function (err1, err2) {
             console.log(err1)
             console.log(err2)
-        })
+        })*/
     })
 }
 
 function GetVideoComments(videoid){
+    console.log(videoid)
     $.ajax({
         url: `http://localhost:63342/videoComments/${videoid}`,
         type: 'GET',
         dataType: 'json',
     }).done(function (data) {
-        $(".comment").empty()
+        $(".comment").remove()
         console.log(data[0].comment);
         //console.log(data[0]);
         let dataComment = data[0].comment
@@ -536,8 +526,8 @@ function GetVideoComments(videoid){
             //console.log(dag)
             let div = $(`<div class='comment' id= ${comment.commentId}>`);
     
-            $(`<p type=text id= ${comment.commentId}>`).text(`username: ${comment.username}`).appendTo(div)
-            $(`<p type=text id= ${comment.commentId}>`).text(`comment: ${comment.comment}`).appendTo(div);
+            $(`<p type=text id= ${comment.commentId} class="font-weight-bold usernameComment">`).text(`${comment.username}`).appendTo(div)
+            $(`<p type=text id= ${comment.commentId} class="usercommentComments">`).text(`${comment.comment}`).appendTo(div);
     
             $(".divTextarea").append(div);
     
@@ -549,7 +539,7 @@ function GetVideoComments(videoid){
 }
 
 function zoekHulp() {
-    console.log('hulp');
+    //console.log('hulp');
     $.ajax({
         url: 'json/hulp.json',
         type: 'GET',
@@ -557,12 +547,17 @@ function zoekHulp() {
     }).done(function (data) {
         //console.log(data);
         for (let result of data.data) {
-            //console.log((result))
-            let div = $(`<div class='col zoekHulpDiv' id= ${result.id}>`);
 
-            $(`<h1 id= ${result.id}>`).text(`${result.centra}`).appendTo(div);
-            $(`<p id= ${result.id}>`).text(`${result.discriptie}`).appendTo(div);
-            $(`<button id= ${result.id} class="zoekHulpbutton btn btn-primary">`).text(`meer info`).appendTo(div);
+            let socialResult = result.discriptie
+            let res = socialResult.replace("break", '\n');
+            //console.log((result))
+            let maindiv = $(`<div style="text-align: center;" class='mainDivZoekHulp' id= ${result.id}>`);
+            let div = $(`<div class='col zoekHulpDiv container' id= ${result.id}>`);
+
+            $(`<h1 id= ${result.id}>`).text(`${result.centra}`).appendTo(maindiv);
+            $(`<p id= ${result.id} class='zoekHulpDiscriptie'>`).text(`${res}`).appendTo(maindiv);
+            $(`<button id= ${result.id} class="zoekHulpbutton btn btn-primary">`).text(`Meer info`).appendTo(maindiv);
+            maindiv.appendTo(div)
             $(".zoekHulpText").append(div);
         }
 
@@ -591,12 +586,22 @@ function zoekHulpDetail(id) {
         for (let i = 0; i < hulpData.length; i += 1) {
             let result = hulpData[i];
             let cijfer = result.id;
-            //console.log(i)
             if (cijfer == id) {
                 let div = $(`<div class='detailHelp' id= ${result.id}>`);
+                let socials = $(`<div class='socials' id= ${result.id}>`);
 
                 $(`<h1 id= ${result.id}>`).text(`${result.centra}`).appendTo(div);
                 $(`<p id= ${result.id}>`).text(`${result.discriptie}`).appendTo(div);
+    
+                for(let social of socialResult){
+                    $(`<p id= ${result.id}>`).text(`chatten: ${social.chatten}`).appendTo(socials);
+                    $(`<p id= ${result.id}>`).text(`locatie: ${social.langsgaan}`).appendTo(div);
+                    $(`<p id= ${result.id}>`).text(`bellen: ${social.bellen}`).appendTo(div);
+                    $(`<p id= ${result.id}>`).text(`website: ${social.website}`).appendTo(div);
+                    $(`<p id= ${result.id}>`).text(`mail: ${social.mail}`).appendTo(div);
+                }
+
+                div.append(socials)
                 $(`<button id= ${result.id} class="terugHulp btn btn-primary">`).text(`terug`).appendTo(div);
                 $(".zoekHulpDetail").append(div);
             }

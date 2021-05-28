@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="_assets/logo-02.png" type="image/png" />
     <title>Profiel</title>
 </head>
 
@@ -19,9 +20,9 @@
             <img src="_assets/logo-02.png" class="navbar-brand" width="130" height="150">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="home.html">wie zijn we</a>
-                    <a class="nav-item nav-link" href="stoornissen.html">Stoornissen</a>
-                    <a class="nav-item nav-link" href="zoek_hulp.html">Zoek hulp</a>
+                    <a class="nav-item nav-link" href="home.html" id="navHome">wie zijn we</a>
+                    <a class="nav-item nav-link" href="stoornissen.html" id="navStoornissen">Stoornissen</a>
+                    <a class="nav-item nav-link" href="zoek_hulp.html" id="navZoekHulp">Zoek hulp</a>
                     <a class="nav-item nav-link" href="profiel.html" id="navLogin"></a>
                 </div>
             </div>
@@ -34,22 +35,22 @@
         <div id="form">
             <form class="login">
                 <h2 hidden class="wrong">Wrong password or login</h2>
-                username:<br>
-                <input type="text" name="username" id="username">
+                Username:<br>
+                <input type="text" placeholder="username" class="form-control" id="username" required>
                 <br>
-                password:<br>
-                <input type="password" name="password" id="password">
-                <button type="submit">Login</button>
+                Password:<br>
+                <input type="password" placeholder="password" class="form-control" id="password" required>
+                <label class="newAccount">Nog geen login <a style="text-decoration: underline;" href="NewUser.html">make er nu een aan </a></label>
                 <br>
-                <label class="newAccount">Nog geen login<a href="NewUser.html">make er nu een aan </a></label>
+                <button type="submit" class=" btn btn-primary loginButton">Login</button>
             </form>
         </div>
     </div>
-    <div class="profielInfo">
-        <div>
-            <h1>Profiel</h1>
+    <div class="profiel">
+        <div class="proefielTitel">
+            <h1 class="text-uppercase text-center">Profiel</h1>
         </div>
-        <div class="profiel">
+        <div class="profielInfo container">
             <!--<p><strong>Naam:</strong></p>
             <p><strong>Achternaam:</strong></p>
             <p><strong>Email adress:</strong></p>
@@ -60,41 +61,52 @@
     </div>
 
     <div class="dagboek">
-        <button>Terug</button>
-        <h1>Dagboek</h1>
+        <h1 class="text-center dagboekH1">Dagboek</h1>
 
         <div class="dagboekContent">
-            <!--<h2>Titel</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Donec commodo sapien eros, non accumsan eros laoreet eu. Nulla ut
-                maximus justo. Cras rutrum magna velit, quis volutpat est vulputate
-                non. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a
-            </p>-->
+        <div class="dagboekInput">
+            <label class="font-weight-bold dagboekLabel text-uppercase">Titel</label>
+            <br>
             <input class="dagboekTitel"></input>
+            <br>
+            <label class="font-weight-bold dagboekLabel text-uppercase">Verhaal</label>
+            <br>
             <input class="dagboekVerhaal"></input>
-            <button class="dagboekVerstuur">Verstuur</button>
-            <button>Meer</button>
-            <button>Edit</button>
+        </div>
+        <div class="dagboekButton">
+            <button class="dagboekVerstuur btn btn-primary ">Verstuur</button>
+        </div>
+        <div class="dagboekAppendVerhaal"></div>
         </div>
         <!--dagboek-->
     </div>
 
     <div class="updateProfile">
+        <h1 class="updateUserTitle">Update profiel</h1>
+        <div id="formUpdate">
         <form id="updateProfileForm">
-            <p class="updateUserTitle">Profiel</p>
-            <div>
-                <input type="text" placeholder="name" id="updateName">
-                <input type="text" placeholder="lastname" id="updateLastName">
+            <div class="row">
+                <div class="col">
+                    <input type="text" placeholder="name" id="updateName" class="form-control" >
+                </div>
+                <div class="col">
+                    <input type="text" placeholder="lastname" id="updateLastName" class="form-control" >
+                </div>
             </div>
 
-            <div>
-                <input type="text" placeholder="username" id="updateUsername">
-                <input type="text" placeholder="email" id="updateEmail">
+            <div class="row">
+                <div class="col">
+                    <input type="text" placeholder="username" id="updateUsername" class="form-control" >
+                    </div>
+                    <div class="col">
+                    <input type="text" placeholder="email" id="updateEmail" class="form-control" >
+                </div>
             </div>
 
-            <button type="submit">Bewerk</button>
-            <button class="BewerkTerug">Terug</button>
+            <button type="submit" class="bewerkUpdatedUser btn btn-primary">Bewerk</button>
+            <button class="BewerkTerug btn btn-primary">Terug</button>
         </form>
+    </div>
     </div>
 </body>
 

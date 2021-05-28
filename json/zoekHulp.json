@@ -4,109 +4,66 @@
       "id": 1,
       "centra": "Awel",
       "discriptie": "Bij Awel kunnen jongeren met al hun vragen of problemen terecht. Het is gratis en anoniem. Er luistert altijd iemand naar je verhaal. Ze proberen je te helpen en een antwoord te zoeken op je vragen.s",
-      "socialeMedia": [
-        {
-          "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen."
-        },
-        {
-          "forum": "lorem ipmsum"
-        },
-        {
-          "bellen": "lorem ipmsum"
-        },
-        {
-          "website": "www.awel.be"
-        },
-        {
-          "mail": "brievenbus@awel.be"
-        },
-        {
-          "facebook": "awel"
-        },
-        {
-          "twitter": "awel"
-        },
-        {
+      "socialeMedia": [{
+          "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+          "forum": "lorem ipmsum",
+          "bellen": "lorem ipmsum",
+          "website": "www.awel.be",
+          "mail": "brievenbus@awel.be",
+          "facebook": "awel",
+          "twitter": "awel",
           "instagram": "awel"
-        }
-      ]
+      }]
     },
     {
       "id": 2,
-      "centra": "Jongerenadviescentrum",
-      "discriptie": "Het JAC geeft je gratis raad en hulp op moeilijke momenten. Er kunnen heel wat problemen aan bod komen: vragen over alleen wonen, ruzies in het gezin, seksueel misbruik, depressie, "      
-      ,"socialeMedia": [
+      "centra": "Jongerenadvies centrum",
+      "discriptie": "Het JAC geeft je gratis raad en hulp op moeilijke momenten. Er kunnen heel wat problemen aan bod komen: vragen over alleen wonen, ruzies in het gezin, seksueel misbruik, depressie,.. ",
+      "socialeMedia": [
         {
-          "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen."
-        },
-        {
-          "langsgaan": "location"
-        },
-        {
-          "bellen": "lorem ipmsum"
-        },
-        {
-          "website": "www.Jac.be"
-        },
-        {
-          "mail": "https://www.caw.be/jac/contacteer-ons/mail/"
-        },
-        {
-          "facebook": "JAC"
-        },
-        {
-          "twitter": "JAC"
-        },
-        {
+          "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+          "langsgaan": "location",
+          "bellen": "lorem ipmsum",
+          "website": "www.Jac.be",
+          "mail": "https://www.caw.be/jac/contacteer-ons/mail/",
+          "facebook": "JAC",
+          "twitter": "JAC",
           "YouTube": "JAC"
         }
       ]
     },
     {
       "id": 3,
-      "centra": "lorem ipsum",
-      "locatie": "Lorem ipsum dolor sit amet",
+      "centra": "zelfmoordlijn",
+      "discriptie": "Denk je soms aan zelfmoord? Ken je iemand die eraan denkt, en maak je je zorgen over hem of haar?\n\nHeb je zelf iemand verloren door zelfmoord?\n\nSoms is het gemakkelijker om erover te praten met een onbekende… De opgeleide vrijwilligers van de Zelfmoordlijn zijn er graag voor jou. Ze helpen je verder op weg",
       "socialeMedia": [
         {
-          "Lorem ipsum": "lorem ipmsum"
-        },
-        {
-          "Lorem ipsum": "lorem ipmsum"
-        },
-        {
-          "Lorem ipsum": "lorem ipmsum"
-        },
-        {
-          "Lorem ipsum": "lorem ipmsum"
-        },
-        {
-          "Lorem ipsum": "lorem ipmsum"
+          "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+          "langsgaan": "location",
+          "bellen": "lorem ipmsum",
+          "website": "www.Jac.be",
+          "mail": "https://www.caw.be/jac/contacteer-ons/mail/",
+          "facebook": "zelfmoordlijn",
+          "twitter": "zelfmoordlijn",
+          "YouTube": "zelfmoordlijn"
         }
-      ],
-      "specialisatie": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec commodo sapien eros, non accumsan eros laoreet eu. Nulla utmaximus justo. Cras rutrum magna velit, quis volutpat est vulputatenon. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a"
+      ]
     },
     {
       "id": 4,
-      "centra": "lorem ipsum",
-      "locatie": "Lorem ipsum dolor sit amet",
+      "centra": "1712",
+      "discriptie": "Voor iedereen \n\n die geweld meemaakt of getuige is van geweld (fysiek, seksueel of financieel).\nGing er iemand over jouw grens? Of vraag je je af of jouw gedrag wel OK is?\n\nDe hulpverleners van 1712 geven informatie en advies of verwijzen je door naar verdere hulp. (gratis en anoniem)",
       "socialeMedia": [
         {
-          "Lorem ipsum": "lorem ipmsum"
-        },
-        {
-          "Lorem ipsum": "lorem ipmsum"
-        },
-        {
-          "Lorem ipsum": "lorem ipmsum"
-        },
-        {
-          "Lorem ipsum": "lorem ipmsum"
-        },
-        {
-          "Lorem ipsum": "lorem ipmsum"
-        }
-      ],
-      "specialisatie": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec commodo sapien eros, non accumsan eros laoreet eu. Nulla utmaximus justo. Cras rutrum magna velit, quis volutpat est vulputatenon. Proin felis justo, volutpat eget sapien non, rutrum luctus odio. Etiam a"
-    }
+        "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+          "langsgaan": "location",
+          "bellen": "lorem ipmsum",
+          "website": "www.Jac.be",
+          "mail": "https://www.caw.be/jac/contacteer-ons/mail/",
+          "facebook": "JAC",
+          "twitter": "JAC",
+          "YouTube": "JAC"
+      }
+      ]}
   ]
 }

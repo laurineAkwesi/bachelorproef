@@ -18,14 +18,19 @@ body {
 
 h1 {
     font-family: "Palanquin Dark";
-    font-size: 30pt;
+    font-size: 25pt;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 p,
 text,
-a {
+a,
+label,
+input {
     font-family: Montserrat;
     font-size: 11pt;
+    color: #132041;
 }
 
 .nav-item {
@@ -33,7 +38,26 @@ a {
     text-transform: uppercase;
     font-weight: bold;
     padding: 0;
-    color: #000;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #132041;
+}
+
+#navHome:hover {
+    color: #A8E0F9;
+}
+
+#navStoornissen:hover {
+    color: #F69FA1;
+}
+
+#navZoekHulp:hover {
+    color: #FEE496;
+}
+
+#navLogin:hover {
+    color: #CDAFD3;
 }
 
 .navbar-nav:first-child {
@@ -60,8 +84,33 @@ a {
     font-weight: bold;
 }
 
-.even {
+.homeEven {
     background-image: url("../_assets/Path\ 261.png");
+}
+
+.even {
+    background-image: url("../_assets/Path\ 240.png");
+}
+
+.profielInfo {
+    background-image: url("../_assets/Path\ 253.png");
+    height: 600px;
+    /* You must set a specified height */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: 80%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.even,
+.homeEven {
     height: 600px;
     /* You must set a specified height */
     background-position: center;
@@ -80,7 +129,8 @@ a {
 }
 
 .zoekHulpbutton {
-    background-color: #F69FA1;
+    background-color: #132041;
+    color: #fdfcf7;
     border: none;
 }
 
@@ -89,10 +139,53 @@ a {
 }
 
 .zoekHulpbutton:hover {
-    color: #F69FA1;
-    border: solid 1px #F69FA1;
+    color: #132041;
+    border: solid 1px #FEE496;
     background-color: white;
 }
+
+.infoButton {
+    background-color: #132041;
+    color: #fdfcf7;
+    border: none;
+}
+
+.infoButton:hover {
+    background-color: #fdfcf7;
+    color: #132041;
+    border: solid 1px #132041;
+}
+
+.zoekHulpDiv {
+    background-image: url("../_assets/Path\ 250.png");
+    /*height: 600px;*/
+    /* You must set a specified height */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: 100%;
+}
+
+/*.loginForm {
+    background-image: url("../_assets/Path\ 250.png");
+    height: 600px;
+    /* You must set a specified height 
+    background-position: top;
+    /* Center the image 
+    background-repeat: no-repeat;
+    /* Do not repeat the image 
+    background-size: 50%;
+}*/
+
+p.zoekHulpDiv {
+    font-size: 5pt;
+}
+
+.zoekHulpDiv {
+    margin-top: 10%;
+}
+
 
 /*.oneven {
     text-align: right;
@@ -116,8 +209,79 @@ a {
     margin-left: 10%;
 }
 
+.terugStroonis:hover {
+    background-color: #F69FA1;
+    color: black;
+    border-radius: 10px;
+    border: none;
+}
+
+.terugStroonis {
+    margin-left: 10%;
+    width: 10%;
+    border-radius: 10px;
+    border: solid 1.5px #F69FA1;
+    background-color: white;
+    color: #F69FA1;
+}
+
 .divTextarea {
-    width: 80%;
+    position: absolute;
+    top: 750px;
+    width: 48%;
+    margin-left: 10%;
+}
+
+.divTextarea textarea {
+    resize: none;
+    border: 1px solid #F69FA1;
+    height: 70px;
+    outline: none;
+}
+
+.stoornisTitel {
+    margin-left: 10%;
+    color: #F69FA1;
+    font-weight: bold;
+}
+
+.divTextareaButton {
+    margin-top: 1em;
+    background-color: #F69FA1;
+    font-weight: bold;
+    color: white;
+}
+
+.divTextareaButton:hover {
+    color: #F69FA1;
+    font-weight: bold;
+    background-color: white;
+    border: solid 2px #F69FA1;
+}
+
+.video {
+    height: 450px;
+}
+
+.verhaal {
+    background-color: #CDAFD3;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 10px;
+    font-size: 14pt;
+}
+
+.comment {
+    background-color: #F69FA1;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 10px;
+    font-size: 14pt;
+    width: 100%;
+}
+
+.divTextareaGetInput {
+    border-radius: solid 1, 5px #A8E0F9;
 }
 
 .detailVideo {
@@ -127,12 +291,114 @@ a {
 .zoekHulpText {
     display: grid;
     grid-template-columns: 500px 500px;
-    grid-template-rows: 300px 300px;
+    grid-template-rows: 500px 500px;
     grid-column-gap: 100px;
     grid-row-gap: 10px;
     justify-content: center;
     margin-top: 40px;
 }
+
+.mainDivZoekHulp {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.zoekHulpDiscriptie {
+    text-align: center;
+}
+
+.voegToe,
+.loginButton,
+.bewerkUpdatedUser,
+.dagboekVerstuur {
+    background-color: #CDAFD3;
+    border: none;
+    margin: 5% 0;
+}
+
+.voegToe:hover,
+.loginButton:hover,
+.bewerkUpdatedUser:hover,
+.dagboekVerstuur:hover {
+    color: #CDAFD3;
+    border: 1px solid #CDAFD3;
+    background-color: white;
+}
+
+#toevoegenForm {
+    width: 60%;
+
+}
+
+#updateProfileForm input {
+    margin: 2%;
+    width: 110%;
+}
+
+#updateProfileForm {
+    margin: 2%;
+}
+
+.newUserForm,
+.loginForm,
+.updateProfile,
+.dagboekContent {
+    display: block;
+    text-align: center;
+}
+
+.newUserForm form,
+#form form,
+#formUpdate form,
+.dagboekAppendVerhaal {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+#form {
+    margin: 3%;
+}
+
+.dagboekTitel,
+.dagboekVerhaal {
+    width: 70%;
+    resize: none;
+    border: 2px solid #CDAFD3;
+    border-radius: 10px;
+    outline: none;
+}
+
+.dagboekVerhaal {
+    height: 200px;
+}
+
+.dagboekTitel {
+    height: 50px;
+    margin-bottom: 2%;
+}
+
+.dagboekVerstuur {
+    margin-top: 2%;
+}
+
+.dagboekContent {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dagboekH1 {
+    margin-bottom: 2%;
+}
+
+.verhaal {
+    width: 1000px;
+}
+
+
 
 /*
 p.stoornisDiv {
