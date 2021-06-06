@@ -48,8 +48,7 @@
           "YouTube": "zelfmoordlijn"
         }
       ]
-    },
-    {
+    },{
       "id": 4,
       "centra": "1712",
       "discriptie": "Voor iedereen die geweld meemaakt of getuige is van geweld (fysiek, seksueel of financieel).\nGing er iemand over jouw grens? Of vraag je je af of jouw gedrag wel OK is?\n\nDe hulpverleners van 1712 geven informatie en advies of verwijzen je door naar verdere hulp. (gratis en anoniem)",
@@ -63,7 +62,86 @@
           "facebook": "JAC",
           "twitter": "JAC",
           "YouTube": "JAC"
-      }
-      ]}
+      }]
+      },{
+        "id": 5,
+        "centra": "CLB",
+        "discriptie": "Bij het CLB kan je terecht als je je niet goed voelt of ergens mee zit, het studeren niet zo goed meevalt, je vragen over je gezondheid hebt of graag wil praten over je studiekeuze.",
+        "socialeMedia": [
+          {
+          "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+            "langsgaan": "location",
+            "bellen": "lorem ipmsum",
+            "website": "https://www.onderwijskiezer.be/v2/clb/index.php",
+            "mail": "https://www.caw.be/jac/contacteer-ons/mail/",
+            "facebook": "JAC",
+            "twitter": "JAC",
+            "YouTube": "JAC"
+        }]
+    },
+    {
+      "id": 6,
+      "centra": "IKMAAKDEKLIK",
+      "discriptie": "Heeft een van jouw ouders psychische problemen of een verslaving? Je maakt je misschien zorgen over hem/haar, maar het is belangrijk dat je ook goed voor jezelf zorgt. IKMAAKDEKLIK.BE is een onlineplatform waar je informatie, lotgenoten en hulp vindt.",
+      "socialeMedia": [
+        {
+        "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+          "langsgaan": "location",
+          "bellen": "lorem ipmsum",
+          "website": "https://www.onderwijskiezer.be/v2/clb/index.php",
+          "mail": "https://www.caw.be/jac/contacteer-ons/mail/",
+          "facebook": "IKMAAKDEKLIK",
+          "twitter": "IKMAAKDEKLIK",
+          "YouTube": "IKMAAKDEKLIK"
+      }]
+    },
+    {
+      "id": 7,
+      "centra": "WAT WAT",
+      "discriptie": "Hoe raak je van je verlegenheid af? Wat betekent GDPR? Hoe kan je zonder risico's naaktfoto’s naar je lief sturen? Zijn er manieren om goedkoop op reis te gaan? Als je jong bent zit je met 1001 vragen. WAT WAT er voor iedereen die het even niet weet. Bij zowel spannende als moeilijke momenten. WAT WAT, jij weet!",
+      "socialeMedia": [
+        {
+        "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+          "langsgaan": "location",
+          "bellen": "lorem ipmsum",
+          "website": "https://www.onderwijskiezer.be/v2/clb/index.php",
+          "mail": "https://www.caw.be/jac/contacteer-ons/mail/",
+          "facebook": "IKMAAKDEKLIK",
+          "twitter": "IKMAAKDEKLIK",
+          "YouTube": "IKMAAKDEKLIK"
+      }]
+    },
+    {
+      "id": 8,
+      "centra": "LUMI - GENDER EN SEKSUELE VOORKEUR",
+      "discriptie": "Lumi is een opvang- en infolijn voor iedereen met vragen over gender en seksuele voorkeur.",
+      "socialeMedia": [
+        {
+        "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+          "langsgaan": "location",
+          "bellen": "lorem ipmsum",
+          "website": "https://www.onderwijskiezer.be/v2/clb/index.php",
+          "mail": "https://www.caw.be/jac/contacteer-ons/mail/",
+          "facebook": "IKMAAKDEKLIK",
+          "twitter": "IKMAAKDEKLIK",
+          "YouTube": "IKMAAKDEKLIK"
+      }]
+    },
+    {
+      "id": 9,
+      "centra": "NOK NOK",
+      "discriptie": "NokNok is een website gericht op jongeren van 12 tot 16 jaar. Ben jij ouder dan 16 jaar?",
+      "socialeMedia": [
+        {
+        "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+          "langsgaan": "location",
+          "bellen": "lorem ipmsum",
+          "website": "https://www.onderwijskiezer.be/v2/clb/index.php",
+          "mail": "https://www.caw.be/jac/contacteer-ons/mail/",
+          "facebook": "IKMAAKDEKLIK",
+          "twitter": "IKMAAKDEKLIK",
+          "YouTube": "IKMAAKDEKLIK"
+      }]
+    }
   ]
 }

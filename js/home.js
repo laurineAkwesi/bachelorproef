@@ -131,8 +131,8 @@ function dagboek(userData) {
             let div = $(`<div class='verhaal' id= ${dag.verhaalId}>`);
     
             $(`<label class="font-weight-bold">`).text(username).appendTo(div)
-            $(`<h5 class= type=text id= ${dag.verhaalId}>`).text(`${dag.titel}`).appendTo(div)
-            $(`<p type=text id= ${dag.verhaalId}>`).text(`${dag.verhaal}`).appendTo(div);
+            $(`<h5 class= type=text id= ${dag.verhaalId} required>`).text(`${dag.titel}`).appendTo(div)
+            $(`<p type=text id= ${dag.verhaalId} required>`).text(`${dag.verhaal}`).appendTo(div);
 
             $(".dagboekAppendVerhaal").append(div);
     
@@ -149,6 +149,7 @@ function dagboek(userData) {
             titel: $('.dagboekTitel').val(),
             verhaal: $('.dagboekVerhaal').val(),
         }
+        $(".verhaal").remove()
         //console.log(verhaal);
         $.ajax({
             url: `http://localhost:63342/dagboek/${userid}`,
@@ -169,6 +170,7 @@ function dagboek(userData) {
 }
 
 function dagboekShow(userData) {
+    let username = userData[0].username
     console.log(userData)
     let userid = localStorage.getItem("userId")
     $.ajax({
@@ -177,7 +179,6 @@ function dagboekShow(userData) {
         dataType: 'json',
     }).done(function (data) {
         console.log(data[0].dagboek);
-        $(".verhaal").empty()
         let dataDagboek = data[0].dagboek
         for (let dag of dataDagboek) {
             //console.log(dag)
@@ -398,13 +399,14 @@ function stoornisDetail(id) {
                 let breakResult = result.meerInfo
                 let res = breakResult.replace(/break/g, "<br>");
 
+
                 //console.log(result.id + result.onderwerp);
                 let div = $(`<div class='d-flex justify-content-around detailVideo' id= ${result.id}>`);
                 let textVideoDiv =$(`<div id= ${result.id} class="embed-responsive embed-responsive-16by9 video">`);
                 let videoDiv =$(`<div class='detailStoornis' id= ${result.id}>`);
                 let divTextarea = $(`<div id= ${result.id} class="divTextarea">`);
                 let titel = $(`<div id= ${result.id}>`);
-                let video = $(`<video class="embed-responsive-item" controls id= ${result.id}>`);
+                let video = $(`<video class="embed-responsive-item" controls autoplay id= ${result.id}>`);
 
                 $(`<h1 id= ${result.id} class="text-uppercase stoornisTitel">`).text(`${result.onderwerp}`).appendTo(titel);
                 $(`<source src= ${result.video} type="video/mp4" id= ${result.id}>`).appendTo(video);
@@ -527,7 +529,7 @@ function GetVideoComments(videoid){
             let div = $(`<div class='comment' id= ${comment.commentId}>`);
     
             $(`<p type=text id= ${comment.commentId} class="font-weight-bold usernameComment">`).text(`${comment.username}`).appendTo(div)
-            $(`<p type=text id= ${comment.commentId} class="usercommentComments">`).text(`${comment.comment}`).appendTo(div);
+            $(`<p type=text class="commentColor" id= ${comment.commentId} class="usercommentComments">`).text(`${comment.comment}`).appendTo(div);
     
             $(".divTextarea").append(div);
     
@@ -593,6 +595,7 @@ function zoekHulpDetail(id) {
                 $(`<h1 id= ${result.id}>`).text(`${result.centra}`).appendTo(div);
                 $(`<p id= ${result.id}>`).text(`${result.discriptie}`).appendTo(div);
     
+                let socialResult = result.socialeMedia
                 for(let social of socialResult){
                     $(`<p id= ${result.id}>`).text(`chatten: ${social.chatten}`).appendTo(socials);
                     $(`<p id= ${result.id}>`).text(`locatie: ${social.langsgaan}`).appendTo(div);

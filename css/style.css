@@ -23,12 +23,16 @@ h1 {
     font-weight: bold;
 }
 
+a {
+    font-family: "Palanquin Dark";
+    font-size: 12pt;
+}
+
 p,
 text,
-a,
 label,
 input {
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11pt;
     color: #132041;
 }
@@ -158,13 +162,18 @@ input {
 
 .zoekHulpDiv {
     background-image: url("../_assets/Path\ 250.png");
-    /*height: 600px;*/
+    height: 500px;
     /* You must set a specified height */
     background-position: center;
     /* Center the image */
     background-repeat: no-repeat;
     /* Do not repeat the image */
     background-size: 100%;
+}
+
+.commentColor,
+.usernameComment {
+    color: #fdfcf7;
 }
 
 /*.loginForm {
@@ -183,7 +192,7 @@ p.zoekHulpDiv {
 }
 
 .zoekHulpDiv {
-    margin-top: 10%;
+    margin-top: 2%;
 }
 
 
@@ -295,7 +304,6 @@ p.zoekHulpDiv {
     grid-column-gap: 100px;
     grid-row-gap: 10px;
     justify-content: center;
-    margin-top: 40px;
 }
 
 .mainDivZoekHulp {
@@ -364,6 +372,7 @@ p.zoekHulpDiv {
 
 .dagboekTitel,
 .dagboekVerhaal {
+    padding: 0.5em;
     width: 70%;
     resize: none;
     border: 2px solid #CDAFD3;
@@ -376,7 +385,7 @@ p.zoekHulpDiv {
 }
 
 .dagboekTitel {
-    height: 50px;
+    height: 40px;
     margin-bottom: 2%;
 }
 
