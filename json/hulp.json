@@ -5,10 +5,10 @@
       "centra": "Awel",
       "discriptie": "Bij Awel kunnen jongeren break met al hun vragen of problemen terecht. Het is gratis en anoniem. Er luistert altijd iemand naar je verhaal. Ze proberen je te helpen en een antwoord te zoeken op je vragen.s",
       "socialeMedia": [{
-          "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+          "chatten": "https://www.awel.be/babbel#chat",
           "forum": "lorem ipmsum",
-          "bellen": "lorem ipmsum",
-          "website": "www.awel.be",
+          "bellen": "02 534 37 43",
+          "website": "https://www.awel.be",
           "mail": "brievenbus@awel.be",
           "facebook": "awel",
           "twitter": "awel",
@@ -21,10 +21,10 @@
       "discriptie": "Het JAC geeft je gratis raad en hulp op moeilijke momenten. Er kunnen heel wat problemen aan bod komen: vragen over alleen wonen, ruzies in het gezin, seksueel misbruik, depressie,.. ",
       "socialeMedia": [
         {
-          "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+          "chatten": "https://www.caw.be/jac/zoek-antwoorden/",
           "langsgaan": "location",
-          "bellen": "lorem ipmsum",
-          "website": "www.Jac.be",
+          "bellen": "02 613 17 02",
+          "website": "https://www.Jac.be",
           "mail": "https://www.caw.be/jac/contacteer-ons/mail/",
           "facebook": "JAC",
           "twitter": "JAC",
@@ -38,10 +38,10 @@
       "discriptie": "Denk je soms aan zelfmoord? Ken je iemand die eraan denkt, en maak je je zorgen over hem of haar?\n\nHeb je zelf iemand verloren door zelfmoord?\n\nSoms is het gemakkelijker om erover te praten met een onbekende… De opgeleide vrijwilligers van de Zelfmoordlijn zijn er graag voor jou. Ze helpen je verder op weg",
       "socialeMedia": [
         {
-          "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+          "chatten": "https://www.zelfmoord1813.be/chat-met-zelfmoordlijn-1813",
           "langsgaan": "location",
           "bellen": "lorem ipmsum",
-          "website": "www.Jac.be",
+          "website": "https://www.zelfmoord1813.be/",
           "mail": "https://www.caw.be/jac/contacteer-ons/mail/",
           "facebook": "zelfmoordlijn",
           "twitter": "zelfmoordlijn",
@@ -51,13 +51,13 @@
     },{
       "id": 4,
       "centra": "1712",
-      "discriptie": "Voor iedereen die geweld meemaakt of getuige is van geweld (fysiek, seksueel of financieel).\nGing er iemand over jouw grens? Of vraag je je af of jouw gedrag wel OK is?\n\nDe hulpverleners van 1712 geven informatie en advies of verwijzen je door naar verdere hulp. (gratis en anoniem)",
+      "discriptie": "Maak je geweld mee, zie je geweld of vraag je je af of je eigen gedrag oké is? 1712 helpt je gratis en anoniem.",
       "socialeMedia": [
         {
-        "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+        "chatten": "https://teens.1712.be/chat",
           "langsgaan": "location",
           "bellen": "lorem ipmsum",
-          "website": "www.Jac.be",
+          "website": "https://1712.be/",
           "mail": "https://www.caw.be/jac/contacteer-ons/mail/",
           "facebook": "JAC",
           "twitter": "JAC",
@@ -69,7 +69,7 @@
         "discriptie": "Bij het CLB kan je terecht als je je niet goed voelt of ergens mee zit, het studeren niet zo goed meevalt, je vragen over je gezondheid hebt of graag wil praten over je studiekeuze.",
         "socialeMedia": [
           {
-          "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+          "chatten": "https://www.clbchat.be/",
             "langsgaan": "location",
             "bellen": "lorem ipmsum",
             "website": "https://www.onderwijskiezer.be/v2/clb/index.php",
@@ -81,34 +81,34 @@
     },
     {
       "id": 6,
-      "centra": "IKMAAKDEKLIK",
-      "discriptie": "Heeft een van jouw ouders psychische problemen of een verslaving? Je maakt je misschien zorgen over hem/haar, maar het is belangrijk dat je ook goed voor jezelf zorgt. IKMAAKDEKLIK.BE is een onlineplatform waar je informatie, lotgenoten en hulp vindt.",
+      "centra": "TELE-ONTHAAL",
+      "discriptie": "Zoek je een uitweg? Soms moet je al je moed bijeen rapen voor een gesprek. Tele-onthaal staat dag en nacht voor je klaar. Anoniem, voor kleine of grote zorgen.",
       "socialeMedia": [
         {
-        "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+        "chatten": "https://www.tele-onthaal.be/",
           "langsgaan": "location",
           "bellen": "lorem ipmsum",
-          "website": "https://www.onderwijskiezer.be/v2/clb/index.php",
-          "mail": "https://www.caw.be/jac/contacteer-ons/mail/",
-          "facebook": "IKMAAKDEKLIK",
-          "twitter": "IKMAAKDEKLIK",
-          "YouTube": "IKMAAKDEKLIK"
+          "website": "https://www.tele-onthaal.be/",
+          "mail": "",
+          "facebook": "TELE-ONTHAAL",
+          "twitter": "TELE-ONTHAAL",
+          "YouTube": "TELE-ONTHAAL"
       }]
     },
     {
       "id": 7,
-      "centra": "WAT WAT",
-      "discriptie": "Hoe raak je van je verlegenheid af? Wat betekent GDPR? Hoe kan je zonder risico's naaktfoto’s naar je lief sturen? Zijn er manieren om goedkoop op reis te gaan? Als je jong bent zit je met 1001 vragen. WAT WAT er voor iedereen die het even niet weet. Bij zowel spannende als moeilijke momenten. WAT WAT, jij weet!",
+      "centra": "DE DRUGSLIJN",
+      "discriptie": "Voor alle vragen over drank, drugs, pillen, gamen en gokken moet je hier zijn. Anoniem, objectief en zonder te (ver)oordelen.",
       "socialeMedia": [
         {
-        "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+        "chatten": "https://www.druglijn.be/stel-je-vraag/chat",
           "langsgaan": "location",
           "bellen": "lorem ipmsum",
-          "website": "https://www.onderwijskiezer.be/v2/clb/index.php",
-          "mail": "https://www.caw.be/jac/contacteer-ons/mail/",
-          "facebook": "IKMAAKDEKLIK",
-          "twitter": "IKMAAKDEKLIK",
-          "YouTube": "IKMAAKDEKLIK"
+          "website": "https://www.druglijn.be/",
+          "mail": "https://www.druglijn.be/stel-je-vraag/mail",
+          "facebook": "DE DRUGSLIJN",
+          "twitter": "DE DRUGSLIJN",
+          "YouTube": "DE DRUGSLIJN"
       }]
     },
     {
@@ -117,30 +117,75 @@
       "discriptie": "Lumi is een opvang- en infolijn voor iedereen met vragen over gender en seksuele voorkeur.",
       "socialeMedia": [
         {
-        "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+        "chatten": "https://www.lumi.be/word-geholpen",
           "langsgaan": "location",
           "bellen": "lorem ipmsum",
-          "website": "https://www.onderwijskiezer.be/v2/clb/index.php",
-          "mail": "https://www.caw.be/jac/contacteer-ons/mail/",
-          "facebook": "IKMAAKDEKLIK",
-          "twitter": "IKMAAKDEKLIK",
-          "YouTube": "IKMAAKDEKLIK"
+          "website": "https://www.lumi.be/",
+          "mail": "https://www.lumi.be/word-geholpen",
+          "facebook": "LUMI",
+          "twitter": "LUMI",
+          "YouTube": "LUMI"
       }]
     },
     {
       "id": 9,
-      "centra": "NOK NOK",
-      "discriptie": "NokNok is een website gericht op jongeren van 12 tot 16 jaar. Ben jij ouder dan 16 jaar?",
+      "centra": "TELEBLOK",
+      "discriptie": "Stress, faalangst of gebrek aan motivatie tijdens de blok of examens? Praat met Teleblok. Open van 17 mei tot en met 24 juni.",
       "socialeMedia": [
         {
-        "chatten": "elke dag van 18 uur tot 22 uur, behalve op zon- en feestdagen.",
+        "chatten": "https://www.teleblok.be/chat",
           "langsgaan": "location",
           "bellen": "lorem ipmsum",
-          "website": "https://www.onderwijskiezer.be/v2/clb/index.php",
-          "mail": "https://www.caw.be/jac/contacteer-ons/mail/",
-          "facebook": "IKMAAKDEKLIK",
-          "twitter": "IKMAAKDEKLIK",
-          "YouTube": "IKMAAKDEKLIK"
+          "website": "https://www.teleblok.be/",
+          "mail": "",
+          "facebook": "TELEBLOK",
+          "twitter": "TELEBLOK",
+          "YouTube": "TELEBLOK"
+      }]
+    },{
+      "id": 10,
+      "centra": "NUPRAATIKEROVER",
+      "discriptie": "Heb je vragen over seksueel misbruik? Word je seksueel lastig gevallen? Word je vaak uitgescholden? Is er iemand die je fysiek pijn doet? Of ken je iemand met zo’n probleem? Nupraatikerover luistert en helpt.",
+      "socialeMedia": [
+        {
+        "chatten": "https://nupraatikerover.sittool.net/chat?",
+          "langsgaan": "location",
+          "bellen": "lorem ipmsum",
+          "website": "https://www.nupraatikerover.be/",
+          "mail": "",
+          "facebook": "NUPRAATIKEROVER",
+          "twitter": "NUPRAATIKEROVER",
+          "YouTube": "NUPRAATIKEROVER"
+      }]
+    },{
+      "id": 11,
+      "centra": "TRANSGENDER INFOPUNT",
+      "discriptie": "Zorgen of vragen over familiale problemen? Discriminatie op het werk of op school? Het transgender infopunt is er voor jou. Via mail of telefoon kan je je vraag stellen of een afspraak maken om langs te komen, te chatten of te videobellen.",
+      "socialeMedia": [
+        {
+        "chatten": "https://transgenderinfo.be/f/contact/formulier/",
+          "langsgaan": "location",
+          "bellen": "lorem ipmsum",
+          "website": "https://transgenderinfo.be/",
+          "mail": "",
+          "facebook": "TRANSGENDER INFOPUNT",
+          "twitter": "TRANSGENDER INFOPUNT",
+          "YouTube": "TRANSGENDER INFOPUNT"
+      }]
+    },{
+      "id": 12,
+      "centra": "UNIA",
+      "discriptie": "Ben je gediscrimineerd omwille van je huidskleur, geloof, leeftijd, handicap of seksuele voorkeur? Of ben je getuige van discriminatie? Klop bij Unia aan.",
+      "socialeMedia": [
+        {
+        "chatten": "https://www.melding.unia.be/nl/meld-het",
+          "langsgaan": "location",
+          "bellen": "lorem ipmsum",
+          "website": "https://www.melding.unia.be/nl/meld-het",
+          "mail": "",
+          "facebook": "UNIA",
+          "twitter": "UNIA",
+          "YouTube": "UNIA"
       }]
     }
   ]

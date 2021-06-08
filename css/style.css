@@ -407,6 +407,13 @@ p.zoekHulpDiv {
     width: 1000px;
 }
 
+a.icon-block {
+    display: inline-block;
+    width: 40px;
+    color: #132041;
+}
+
+
 
 
 /*

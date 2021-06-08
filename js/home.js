@@ -552,13 +552,25 @@ function zoekHulp() {
 
             let socialResult = result.discriptie
             let res = socialResult.replace("break", '\n');
-            //console.log((result))
+            //console.log((result.socialeMedia[0].website))
             let maindiv = $(`<div style="text-align: center;" class='mainDivZoekHulp' id= ${result.id}>`);
             let div = $(`<div class='col zoekHulpDiv container' id= ${result.id}>`);
+            let icons = $(`<div id= ${result.id}>`);
+            //https://stackoverflow.com/questions/18560755/how-can-i-add-an-href-to-a-fontawesome-icon-and-word-below-it
+            let aWebsiteIcon = $(`<a id= ${result.id} class="icon-block fa-lg" href=${result.socialeMedia[0].website} class="icon-block">`);
+            let aBellenIcon = $(`<a id= ${result.id} class="icon-block fa-lg" href=${result.socialeMedia[0].bellen} class="icon-block">`);
+            let aChattenIcon = $(`<a id= ${result.id} class="icon-block fa-lg" href=${result.socialeMedia[0].chatten} class="icon-block">`);
 
             $(`<h1 id= ${result.id}>`).text(`${result.centra}`).appendTo(maindiv);
             $(`<p id= ${result.id} class='zoekHulpDiscriptie'>`).text(`${res}`).appendTo(maindiv);
-            $(`<button id= ${result.id} class="zoekHulpbutton btn btn-primary">`).text(`Meer info`).appendTo(maindiv);
+            
+            $(`<i id= ${result.id} class="fas fa-mobile">`).appendTo(aBellenIcon);
+            $(`<i id= ${result.id} class="fas fa-globe">`).appendTo(aWebsiteIcon);
+            $(`<i id= ${result.id} class="fas fa-laptop">`).appendTo(aChattenIcon);
+
+            //$(`<button id= ${result.id} class="zoekHulpbutton btn btn-primary">`).text(`Meer info`).appendTo(maindiv);
+            icons.append(aBellenIcon).append(aWebsiteIcon).append(aChattenIcon)
+            maindiv.append(icons)
             maindiv.appendTo(div)
             $(".zoekHulpText").append(div);
         }
