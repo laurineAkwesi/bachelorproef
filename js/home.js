@@ -13,6 +13,7 @@ $(document).ready(function () {
     $('.profiel').hide();
     $('.dagboek').hide();
     $('.updateProfile').hide();
+    $('.WatDoenWeHidden').hide();
 
     $('.leesMeer').on('click', function () {
         $('#stoornis').hide();
@@ -67,18 +68,19 @@ function profiel() {
 
             let div = $(`<div class='userProfiel' id= ${result.userId}>`);
 
+            $(`<button type="button" class="dagboekShowButton btn btn-success" id= ${result.userId}>`).text('Dagboek').appendTo(div);
             $(`<h2 type=text id= ${result.userId} userInfo>`).text(`${result.username}`).appendTo(div)
             $(`<p type=text id= ${result.userId}>`).text(`${result.name}`).appendTo(div);
             $(`<p type=text id= ${result.userId}>`).text(`${result.lastname}`).appendTo(div);
             $(`<p type=text id= ${result.userId}>`).text(`${result.email}`).appendTo(div);
             $(`<button type="button" class="bewerk btn btn-primary" id= ${result.userId}>`).text('Update').appendTo(div);
             $(`<button type="button" class="logOut btn btn-warning" id= ${result.userId}>`).text('Log Out').appendTo(div);
-            $(`<button type="button" class="dagboekButton btn btn-success" id= ${result.userId}>`).text('Dagboek').appendTo(div);
+            
 
             $(".profielInfo").append(div);
         }
 
-        $(".dagboekButton").on("click", function () {
+        $(".dagboekShowButton").on("click", function () {
             $('.dagboek').show();
             dagboek(data)
             $('.profiel').hide()
@@ -334,9 +336,11 @@ function stroornissen() {
             let p = $(`<div id= ${result.id} class="d-inline p-2 stoornisText">`);
             let divImgAppend = $(`<div id= ${result.id} class="divImg  d-inline p-2"">`);
             let divImgPrepend = $(`<div id= ${result.id} class="divImg  d-inline p-2"">`);
+            let divImgAppendSmall = $(`<div id= ${result.id} class="divImg  d-inline p-2"">`);
 
             $(`<img id= ${result.id} src= ${result.img} width="200" height="210">`).appendTo(divImgAppend);
             $(`<img id= ${result.id} src= ${result.img} width="200" height="210">`).appendTo(divImgPrepend);
+            $(`<img id= ${result.id} src= ${result.img} width="200" height="210">`).appendTo(divImgAppendSmall);
             $(`<h1 id= ${result.id}>`).text(`${result.onderwerp}`).appendTo(p);
             $(`<p id= ${result.id} class="stoornisDiscriptie">`).text(`${result.discriptie}`).appendTo(p);
             $(`<button id= ${result.id} class="btn btn-outline-danger infoButton">`).text(`Meer info`).appendTo(p);
@@ -350,18 +354,22 @@ function stroornissen() {
                 $(".stoornisTextOneven").css("margin-right", "10%")
             }
 
+            if ($(window).width() < 960) {
+                $(divImgAppend).empty()
+                $(divImgPrepend).empty()
+                div.prepend(divImgAppendSmall);
+             }
+
             $("#stoornis").append(div);
 
-            /*if (result.id % 2 === 0) {
-                $(".stoornisDiv").addClass("even");
-            } else{ 
-                $(".stoornisDiv").addClass("oneven");
-            }*/
+          
             $(".stoornisDiv:even").addClass("even")
             $(".stoornisDiv:odd").addClass("oneven");
 
             $(".stoornisText:even").addClass("stoornisTextEven")
             $(".stoornisText:odd").addClass("stoornisTextOneven");
+
+
 
         }
 

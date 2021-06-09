@@ -92,19 +92,24 @@ input {
     background-image: url("../_assets/Path\ 261.png");
 }
 
+.wieZijnWe,
+.WatDoenWe {
+    width: 40%;
+}
+
 .even {
     background-image: url("../_assets/Path\ 240.png");
 }
 
 .profielInfo {
     background-image: url("../_assets/Path\ 253.png");
-    height: 600px;
+    height: 500px;
     /* You must set a specified height */
     background-position: center;
     /* Center the image */
     background-repeat: no-repeat;
     /* Do not repeat the image */
-    background-size: 80%;
+    background-size: 60%;
 }
 
 .container {
@@ -413,228 +418,164 @@ a.icon-block {
     color: #132041;
 }
 
-
-
-
-/*
-p.stoornisDiv {
-    width: 70%;
-    padding: 20%;
+.bewerk {
+    background-color: #A8E0F9;
 }
 
-.zoekHulp {
-    width: 40%;
+.logOut {
+    background-color: #F69FA1;
 }
 
-.stoornisDiscriptie {
-    margin: 5% 0;
+.dagboekShowButton {
+    background-color: #FEE496;
+    margin-bottom: 10%;
 }
 
-.divImg {
-    margin-bottom: ;
-}*/
-
-/*.header {
-    width: 100%;
-    height: 80px;
-    background-color: red;
-}
-.logo {
-    display: inline-block;
-    vertical-align: top;
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-    margin-top: 15px;
-}
-.header > a {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 20px;
-    height: 80px;
-    line-height: 80px;
-}
-https://stackoverflow.com/questions/30624709/css-html-navigation-and-logo-on-same-line/30624865*/
-/*.logo {
-    width: 8%;
+.dagboekShowButton:hover {
+    background-color: #CDAFD3;
+    border: 2px solid #FEE496;
+    color: #132041;
 }
 
-.header {
-    overflow: hidden;
-    /*background-color: #0054A4;
+.bewerk:hover {
+    border: 2px solid #A8E0F9;
+    background-color: #CDAFD3;
+    color: #132041;
 }
 
-.header a,
-.header img {
-    text-align: center;
-    color: black;
-    float: left;
-    margin-right: 5em;
-    padding: 1.2em;
-    list-style: none;
-    font-size: 17px;
-    text-decoration: none;
-}
-
-.header a {
-    margin-top: 2em;
-}
-
-.header img {
-    padding: 0;
+.logOut:hover {
+    background-color: #CDAFD3;
+    border: 2px solid #F69FA1;
+    color: #132041;
 }
 
 
-.zoekHulpbutton {
-    border: 2px solid #4CAF50;
-    border-radius: 20px;
-    width: 120px;
-}
-
-/*home
-.homeVideo {
-    width: 100%;
-    height: auto;
-}
-
-.inspoQuotes {
-    margin: auto;
-    width: 70%;
-    padding: 10px;
-}
-
-.svg {
-    width: 100%;
-    height: auto;
-}
-
-.svgText {
-    font: italic 30px sans-serif;
-}
-
-.pQuote {
-    text-align: center;
-}
-
-.divWieZijnWe,
-.divWatDoenWe {
-    padding: 100px;
-}
-
-.divWieZijnWe,
-.homeLogoL {
-    float: right;
+.bewerk,
+.logOut,
+.dagboekShowButton {
+    color: #132041;
+    border: none;
     width: 50%;
 }
 
-.divWatDoenWe,
-.homeLogoR {
-    float: left;
-    width: 50%;
+@media (max-width: 800px) {
+    div {
+        display: block;
+    }
+
+    h1 {
+        font-size: 15pt;
+    }
+
+    p {
+        font-size: 9pt;
+    }
+
+    .stoornisDiv,
+    .detailVideo,
+    .home {
+        flex-direction: column;
+        background-image: none;
+    }
+
+    .stoornisText,
+    .wieZijnWe,
+    .WatDoenWe {
+        width: 90%;
+    }
+
+    .WatDoenWe {
+        margin-left: 5%;
+        margin-right: 0;
+    }
+
+    .stoornisTextEven,
+    .stoornisTextOneven {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .stoornisDiv {
+        margin: 0;
+    }
+
+    .video {
+        height: 200px;
+    }
+
+    .detailStoornis {
+        width: 95%;
+        margin-left: 0;
+        margin-top: 5%;
+    }
+
+    .terugStroonis {
+        width: 30%;
+    }
+
+    .divTextarea {
+        top: 1100px;
+    }
+
+    .divTextarea textarea {
+        width: 90%;
+    }
+
+    .zoekHulpText {
+        grid-template-columns: 500px;
+        grid-template-rows: 0;
+    }
+
+    .zoekHulpDiv {
+        background-size: 80%;
+        height: 300px
+    }
+
+    .zoekHulpDiscriptie {
+        margin: 5% 10%;
+    }
+
+    .profielInfo {
+        height: 350px;
+    }
+
+    .verhaal {
+        width: 300px;
+        padding: 2%;
+    }
+
+    h5 {
+        font-size: 10pt;
+    }
+
+    .caption p {
+        font-size: 7pt;
+    }
+
+    .bewerk,
+    .logOut,
+    .dagboekButton {
+        font-size: 8pt;
+        padding: 2%;
+    }
+
 }
 
-.homeLogoL,
-.homeLogoR {
-    width: 30%;
+@media (max-width: 1000px) {
+    .verhaal {
+        width: 700px;
+        padding: 2%;
+    }
+
+    .home {
+        background-size: 90%;
+    }
+
+    .home p {
+        font-size: 8pt;
+    }
+
+    .profielInfo {
+        background-size: 120%;
+    }
 }
-
-.StruktrFooter {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center;
-}
-
-
-/*profiel*/
-
-
-/*stoornissen
-
-.container{
-    position: relative;
-    bottom: 8px;
-    left: 15%;
-}
-
-.hersenen{
-    position: absolute;
-    top: 50%;
-    left: 38%;
-    transform: translate(-50%, -50%);
-}
-
-.hersenen p, .depressie p{
-    width: 30%;
-    padding: 1em 0;
-}
-
-.depressie h1{
-text-align: center;
-}
-
-.depressie p{
-    text-align: right;
-    float: right;
-
-}
-
-.containerLeft {
-    background-image: url("../_assets/backgroundStoornis.png");
-    /*background-color: #4CAF50;
-    background-size: 70%;
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.hersenen {
-    text-align: left;
-    width: 30%;
-    position: absolute;
-    display: inline-block;
-    top: 45%; /*wie zijn we
-    left: 35%;
-    transform: translate(-50%, -50%); /*zoek hulp
-}
-
-.logoHersenen {
-    width: 20%;
-    float: right;
-}
-
-.test {
-    display: inline;
-}
-
-.containerRight {
-    background-image: url("../_assets/backgroundStoornis.png");
-    background-size: 70%;
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.depressie {
-    text-align: right;
-    background-color: cornflowerblue;
-    width: 30%;
-    position: absolute;
-    top: 45%; /*wie zijn we
-    right: 10%;
-    transform: translate(-50%, -50%); /*zoek hulp
-}
-
-.detailStoornis video {
-    width: 40%;
-    height: auto;
-    padding-left: 10%;
-}
-
-.detailStoornis p {
-    float: right;
-    width: 40%;
-}*/
