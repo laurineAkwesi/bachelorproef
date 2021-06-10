@@ -324,7 +324,8 @@ p.zoekHulpDiv {
 .voegToe,
 .loginButton,
 .bewerkUpdatedUser,
-.dagboekVerstuur {
+.dagboekVerstuur,
+.dagboekTerugButton {
     background-color: #CDAFD3;
     border: none;
     margin: 5% 0;
@@ -333,7 +334,8 @@ p.zoekHulpDiv {
 .voegToe:hover,
 .loginButton:hover,
 .bewerkUpdatedUser:hover,
-.dagboekVerstuur:hover {
+.dagboekVerstuur:hover,
+.dagboekTerugButton:hover {
     color: #CDAFD3;
     border: 1px solid #CDAFD3;
     background-color: white;
@@ -394,7 +396,8 @@ p.zoekHulpDiv {
     margin-bottom: 2%;
 }
 
-.dagboekVerstuur {
+.dagboekVerstuur,
+.dagboekTerugButton {
     margin-top: 2%;
 }
 

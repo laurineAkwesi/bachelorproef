@@ -27,6 +27,11 @@ $(document).ready(function () {
 
     $("#navLogin").text("Login");
 
+    $('.dagboekTerugButton').on('click', function(){
+        $('.dagboek').hide();
+        $('.profiel').show();
+    })
+
 });
 
 function quote() {
@@ -70,9 +75,9 @@ function profiel() {
 
             $(`<button type="button" class="dagboekShowButton btn btn-success" id= ${result.userId}>`).text('Dagboek').appendTo(div);
             $(`<h2 type=text id= ${result.userId} userInfo>`).text(`${result.username}`).appendTo(div)
-            $(`<p type=text id= ${result.userId}>`).text(`${result.name}`).appendTo(div);
-            $(`<p type=text id= ${result.userId}>`).text(`${result.lastname}`).appendTo(div);
-            $(`<p type=text id= ${result.userId}>`).text(`${result.email}`).appendTo(div);
+            $(`<p type=text id= ${result.userId}>`).text(`Naam: ${result.name}`).appendTo(div);
+            $(`<p type=text id= ${result.userId}>`).text(`Achternaam: ${result.lastname}`).appendTo(div);
+            $(`<p type=text id= ${result.userId}>`).text(`Email: ${result.email}`).appendTo(div);
             $(`<button type="button" class="bewerk btn btn-primary" id= ${result.userId}>`).text('Update').appendTo(div);
             $(`<button type="button" class="logOut btn btn-warning" id= ${result.userId}>`).text('Log Out').appendTo(div);
             
@@ -132,7 +137,7 @@ function dagboek(userData) {
             //console.log(dag)
             let div = $(`<div class='verhaal' id= ${dag.verhaalId}>`);
     
-            $(`<label class="font-weight-bold">`).text(username).appendTo(div)
+            //$(`<label class="font-weight-bold">`).text(username).appendTo(div)
             $(`<h5 class= type=text id= ${dag.verhaalId} required>`).text(`${dag.titel}`).appendTo(div)
             $(`<p type=text id= ${dag.verhaalId} required>`).text(`${dag.verhaal}`).appendTo(div);
 
@@ -188,7 +193,7 @@ function dagboekShow(userData) {
             //console.log(dag)
             let div = $(`<div class='verhaal' id= ${dag.verhaalId}>`);
     
-            $(`<label class="font-weight-bold">`).text(username).appendTo(div)
+            //$(`<label class="font-weight-bold">`).text(username).appendTo(div)
             $(`<h3 type=text id= ${dag.verhaalId}>`).text(`${dag.titel}`).appendTo(div)
             $(`<p type=text id= ${dag.verhaalId}>`).text(`${dag.verhaal}`).appendTo(div);
 
