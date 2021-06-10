@@ -141,7 +141,7 @@ function dagboek(userData) {
             $(`<h5 class= type=text id= ${dag.verhaalId} required>`).text(`${dag.titel}`).appendTo(div)
             $(`<p type=text id= ${dag.verhaalId} required>`).text(`${dag.verhaal}`).appendTo(div);
 
-            $(".dagboekAppendVerhaal").append(div);
+            $(".dagboekAppendVerhaal").prepend(div);
     
         }
 
@@ -197,7 +197,7 @@ function dagboekShow(userData) {
             $(`<h3 type=text id= ${dag.verhaalId}>`).text(`${dag.titel}`).appendTo(div)
             $(`<p type=text id= ${dag.verhaalId}>`).text(`${dag.verhaal}`).appendTo(div);
 
-            $(".dagboekAppendVerhaal").append(div);
+            $(".dagboekAppendVerhaal").prepend(div);
     
         }
     }).fail(function (err1, err2) {
@@ -419,15 +419,15 @@ function stoornisDetail(id) {
                 let videoDiv =$(`<div class='detailStoornis' id= ${result.id}>`);
                 let divTextarea = $(`<div id= ${result.id} class="divTextarea">`);
                 let titel = $(`<div id= ${result.id}>`);
-                let video = $(`<video class="embed-responsive-item" controls autoplay id= ${result.id}>`);
+                //let video = $(`<video class="embed-responsive-item" id= ${result.id}>`);
 
                 $(`<h1 id= ${result.id} class="text-uppercase stoornisTitel">`).text(`${result.onderwerp}`).appendTo(titel);
-                $(`<source src= ${result.video} type="video/mp4" id= ${result.id}>`).appendTo(video);
+                $(`<iframe src= ${result.video} id= ${result.id} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>`).appendTo(textVideoDiv);
                 $(`<textarea id= ${result.id} class="form-control form-control-sm divTextareaGetInput" placeholder="Doe je verhaal..." required>`).appendTo(divTextarea);
                 $(`<button id= ${result.id} class="divTextareaButton btn">`).text(`Comment`).appendTo(divTextarea);
                 $(`<p id= ${result.id}>`).html(`${res}`).appendTo(videoDiv);
                 $(`<button id= ${result.id} class="terugStroonis btn btn-outline-success">`).text(`Terug`).appendTo(titel);
-                textVideoDiv.append(video)
+                //textVideoDiv.append(video)
                 div.append(textVideoDiv)
                 //div.append(video)
                 div.append(videoDiv)
