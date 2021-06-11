@@ -422,7 +422,7 @@ function stoornisDetail(id) {
                 //let video = $(`<video class="embed-responsive-item" id= ${result.id}>`);
 
                 $(`<h1 id= ${result.id} class="text-uppercase stoornisTitel">`).text(`${result.onderwerp}`).appendTo(titel);
-                $(`<iframe src= "${result.video}&autoplay=1"frameborder="0" allowfullscreen" id= ${result.id}>`).appendTo(textVideoDiv);
+                $(`<iframe src= "${result.video}&autoplay=1"frameborder="0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen" id= ${result.id}>`).appendTo(textVideoDiv);
                 $(`<textarea id= ${result.id} class="form-control form-control-sm divTextareaGetInput" placeholder="Doe je verhaal..." required>`).appendTo(divTextarea);
                 $(`<button id= ${result.id} class="divTextareaButton btn">`).text(`Comment`).appendTo(divTextarea);
                 $(`<p id= ${result.id}>`).html(`${res}`).appendTo(videoDiv);

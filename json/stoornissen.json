@@ -2,7 +2,7 @@
   "data": [{
       "id": 1,
       "onderwerp": "Depressie",
-      "video": "mp4",
+      "video": "https://www.youtube.com/embed/sze__7HHOWA?",
       "img": "../_assets/depressie.png",
       "discriptie": "Iedereen heeft wel eens een dipje of voelt zich even down. Dat is heel normaal, niet elke dag is even prettig. Maar als je verschillende weken of maanden nergens nog zin in hebt en de droevige gevoelens blijven duren, is er kans op een depressie. Niets interesseert je nog. Alles lijkt somber. Een depressie duurt een tijdje. Het is niet zomaar een dagje triest zijn.",
       "meerInfo": "Een depressie kan je voelen in je hoofd. Je kan droevig zijn, je wanhopig voelen, jezelf niet goed genoeg vinden, nergens zin in hebben, schuldgevoelens hebben, negatief denken, … Ook je lichaam vertelt je dat er iets mis is. Je wil altijd slapen of je kan net niet goed slapen, je eetlust is verdwenen, je ben altijd moe, je hebt geen energie meer, … break break Het is moeilijk te zeggen waarom iemand depressief is. Meestal komt het niet door één ding. Vaak is het een combinatie van zaken in je lichaam, hoofd en je omgeving. break break In je lichaam kan je bijvoorbeeld te weinig stoffen hebben van iets, te weinig vitaminen hebben, teveel alcohol of drugs gebruiken, …. break break Dingen in je hoofd die kunnen maken dat je depressief wordt, zijn bijvoorbeeld: te weinig zelfvertrouwen hebben, heel perfectionistisch zijn, angst hebben om iets niet goed te doen, …. break break In je omgeving kunnen er dingen gebeuren waardoor je depressieve gevoelens krijgt, zoals problemen thuis, een overlijden van iemand die je goed kent, ernstige conflicten op school, …. break break Als je depressief bent, heb je geen energie meer. Het is moeilijker om iets te ondernemen. Toch is het belangrijk dat je er met iemand over praat. Je huisdokter bijvoorbeeld of de mensen van het CLB of het JAC helpen je hier graag mee verder. Weet je niet goed hoe beginnen? Bereid je voor met de handleiding om hulp te vragen."
@@ -34,3 +34,4 @@
     }
   ]
 }
+
