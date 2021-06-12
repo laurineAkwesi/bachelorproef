@@ -44,7 +44,7 @@ function quote() {
         dataType: 'json'
     }).done(function (data) {
         //console.log(data);
-        let randomQuote = Math.floor((Math.random() * 100) + 1);
+        let randomQuote = Math.floor((Math.random() * 200) + 1);
         let quote = data[randomQuote];
         //console.log(quote.text);
         $(`<p class='quote'>`).text(`${quote.text}`).appendTo('.caption');
