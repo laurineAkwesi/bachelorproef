@@ -33,11 +33,13 @@ const client = new MongoClient(uri, {
     useUnifiedTopology: true
 });
 let collection;
-let videoCollection
+let videoCollection;
+let centra;
 
 client.connect(err => {
     collection = client.db("bachelorproef").collection("userinfo");
     videoCollection = client.db("bachelorproef").collection("video");
+    centra = client.db("bachelorproef").collection("centra");
     // perform actions on the collection object
     console.log('We are connected bitches');
     runProgram();
@@ -211,6 +213,87 @@ let runProgram = () => {
             res.send(docs);
         });
     })
+
+    app.get('/centra', (req, res) => {
+        //new collection! video
+        //let videoId = req.params.videoid;
+        //console.log(parseInt(videoId))
+        centra.find({
+        }).toArray(function (err, docs) {
+            //console.log(docs)
+            res.send(docs);
+        });
+    })
+
+    app.post('/voegCentraToe', (req, res) => {
+        let centraNaam = req.body.centraNaam;
+        let discriptie = req.body.discriptie;
+        let website = req.body.website;
+        let bellen = req.body.bellen;
+        let chatten = req.body.chatten;
+       centra.insertOne({
+        "id": Math.round(Math.random() * 100),
+        "centra": centraNaam,
+        "discriptie": discriptie,
+        "socialeMedia":[{
+            "chatten": chatten,
+            "bellen": bellen,
+            "website": website,
+        }]
+    }, function (err, result) {
+        assert.equal(err, null);
+        console.log(err)
+        console.log("inserted");
+        //console.log(result)
+    })
+       })
+
+       app.get("/getCentra/:id", (req, res) => {
+        let userid = req.params.id
+        //console.log(parseInt(userid)
+        centra.find({
+            id: parseInt(userid)
+        }).toArray(function (err, docs) {
+            //console.log(docs)
+            res.send(docs);
+        });
+    });
+
+    app.put('/updatecentra/:id', (req, res) => {
+        console.log(req.params.id)
+        let id = req.params.id
+        console.log(req.body.centraNaam)
+        //console.log(req.body.name)
+        centra.updateOne({
+            id: parseInt(id)
+        }, {
+            $set: {
+                "centra": req.body.centraNaam,
+                "discriptie": req.body.discriptie,
+                "socialeMedia":[{
+                    "chatten": req.body.chatten,
+                    "bellen": req.body.bellen,
+                    "website": req.body.website,
+                }]
+            }
+        }, function (err, result) {
+            //console.log(err)
+            res.send(result)
+        })
+    })
+
+    app.put('/VerwijderenCentra/:id', (req, res) => {
+        let centraId = req.params.id
+
+        //https://www.w3schools.com/nodejs/nodejs_mongodb_delete.asp
+        centra.deleteOne({ id: parseInt(centraId) 
+        }, function(err, docs) {
+            if (err) throw err;
+            console.log("1 document deleted");
+            res.send(docs);
+          });
+    })
+
 
 
     app.get('/api/getUserData/:id', (req, res) => {

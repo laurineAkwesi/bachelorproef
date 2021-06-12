@@ -39,6 +39,7 @@ input {
 
 .nav-item {
     margin-right: 10em;
+    margin-bottom: 2%;
     text-transform: uppercase;
     font-weight: bold;
     padding: 0;
@@ -46,6 +47,10 @@ input {
 
 .navbar-light .navbar-nav .nav-link {
     color: #132041;
+}
+
+.navbar {
+    padding: 0;
 }
 
 #navHome:hover {

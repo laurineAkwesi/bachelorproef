@@ -14,6 +14,9 @@ $(document).ready(function () {
     $('.dagboek').hide();
     $('.updateProfile').hide();
     $('.WatDoenWeHidden').hide();
+    $('.newCentraForm').hide();
+    $('.updateCentraForm').hide();
+
 
     $('.leesMeer').on('click', function () {
         $('#stoornis').hide();
@@ -233,6 +236,9 @@ function login() {
                     window.location.href = "home.html";
                     localStorage.setItem("userId", userId);
 
+                }
+                if(username === "admin"){
+                    window.location.href = "admin.html";
                 }
             }
         }).fail(function (err1, err2) {
@@ -497,30 +503,6 @@ function PostVideoComments(comment, videoid){
             console.log(err1)
             console.log(err2)
         })
-
-        /*$.ajax({
-            url: `http://localhost:63342/videoComments/${videoid}`,
-            type: 'GET',
-            dataType: 'json',
-        }).done(function (data) {
-            console.log(data[0].comment);
-            let dataComment = data[0].comment
-            for (let comment of dataComment) {
-                //console.log(dag)
-                //let dag = result[i]
-                //console.log(dag)
-                let div = $(`<div class='comment' id= ${comment.commentId}>`);
-        
-                $(`<p type=text id= ${comment.commentId}>`).text(`username: ${comment.username}`).appendTo(div)
-                $(`<p type=text id= ${comment.commentId}>`).text(`comment: ${comment.comment}`).appendTo(div);
-        
-                $(".divTextarea").append(div);
-        
-            }
-        }).fail(function (err1, err2) {
-            console.log(err1)
-            console.log(err2)
-        })*/
     })
 }
 
@@ -556,13 +538,12 @@ function GetVideoComments(videoid){
 function zoekHulp() {
     //console.log('hulp');
     $.ajax({
-        url: 'json/hulp.json',
+        url: `http://localhost:63342/centra`,
         type: 'GET',
         dataType: 'json',
     }).done(function (data) {
-        //console.log(data);
-        for (let result of data.data) {
-
+        console.log(data);
+        for (let result of data) {
             let socialResult = result.discriptie
             let res = socialResult.replace("break", '\n');
             //console.log((result.socialeMedia[0].website))
@@ -586,17 +567,138 @@ function zoekHulp() {
             maindiv.append(icons)
             maindiv.appendTo(div)
             $(".zoekHulpText").append(div);
+
+
+            let tr = $(`<tr id=${result.id}>`);
+            let tableDiv = $(`<div>`)
+
+            $('<td>').text(result.centra).appendTo(tr)
+            $('<td>').text(result.discriptie).appendTo(tr)
+            $('<td>').text(result.socialeMedia[0].website).appendTo(tr)
+            $('<td>').text(result.socialeMedia[0].bellen).appendTo(tr)
+            $('<td>').text(result.socialeMedia[0].chatten).appendTo(tr)
+            $(`<button id=${result.id} class="btn btn-success editCentra">`).text('edit').appendTo(tableDiv)
+            $(`<button id=${result.id} class="btn btn-danger deleteCentra">`).text('delete').appendTo(tableDiv)
+            tr.append(tableDiv)
+            $('.table').append(tr)
         }
 
         $('.zoekHulpbutton').on("click", function () {
             let zoekHulpId = $(this).attr('id');
-            console.log(zoekHulpId)
+            //console.log(zoekHulpId)
             zoekHulpDetail(zoekHulpId)
         })
+
+        $('.editCentra').on("click", function () {
+            let centraId = $(this).attr('id');
+            //console.log(centraId)
+            editCentra(centraId)
+        })
+
+        $('.deleteCentra').on("click", function () {
+            let centraId = $(this).attr('id');
+            //console.log(centraId)
+            deleteCentra(centraId)
+        })
+
+        $('.voegCentraToe').on("click", function () {
+            voegCentraToe()
+            $('.centra').hide()
+            $('.newCentraForm').show()
+        })
+
+
     }).fail(function (err1, err2) {
         console.log(err1)
         console.log(err2)
     })
+}
+
+function voegCentraToe(){
+    let centra = {
+        centraNaam: $('#newCentra').val(),
+        discriptie: $('#newDiscriptie').val(),
+        website: $('#newWebsite').val(),
+        bellen: $('#newBellen').val(),
+        chatten: $('#newChatten').val(),
+    }
+    console.log('pressed');
+    $.ajax({
+        url: "http://localhost:63342/voegCentraToe",
+        type: 'POST',
+        data: centra,
+        success: function (data, e) {
+            e.preventDefault()
+            console.log(data)
+            console.log('added!')
+        }
+    }).fail(function (err1, err2) {
+        console.log(err1)
+        console.log(err2)
+    })
+}
+
+function editCentra(id){
+    $('.centra').hide()
+    $('.updateCentraForm').show()
+    let userid = localStorage.getItem("userId")
+    $.ajax({
+        url: `http://localhost:63342/getCentra/${id}`,
+        type: 'GET',
+        dataType: 'json'
+    }).done(function (data) {
+        console.log(data);
+        for (let centraNaam of data) {
+            $("#updateCentra").val(centraNaam.centra);
+            $("#updateDiscriptie").val(centraNaam.discriptie);
+            $("#updateWebsite").val(centraNaam.socialeMedia[0].website);
+            $("#updateBellen").val(centraNaam.socialeMedia[0].bellen);
+            $("#updateChatten").val(centraNaam.socialeMedia[0].chatten);
+        }
+
+        $('form#updateCentraForm').submit(function (e) {
+            e.preventDefault();
+
+            let centraupdate = {
+                centraNaam: $("#updateCentra").val(),
+                discriptie: $("#updateDiscriptie").val(),
+                website:$("#updateWebsite").val(),
+                bellen:$("#updateBellen").val(),
+                chatten:$("#updateChatten").val()
+            }
+
+            console.log(centraupdate);
+            $.ajax({
+                url: `http://localhost:63342/updatecentra/${id}`,
+                type: "PUT",
+                data: centraupdate,
+                success: function (data) {
+                    window.location.href = "admin.html";
+                    console.log('updated!')
+                    console.log(data)
+                }
+            }).fail(function (err1, err2) {
+                console.log(err1)
+                console.log(err2)
+            })
+        })
+    })
+}
+
+function deleteCentra(id){
+        $.ajax({
+            url: `http://127.0.0.1:63342/VerwijderenCentra/${id}`,
+            type: 'PUT',
+            data: id,
+            success: function (data) {
+                console.log(data)
+                console.log('removed!')
+                window.location.href = "admin.html";
+            }
+        }).fail(function (err1, err2) {
+            console.log(err1)
+            console.log(err2)
+        })
 }
 
 function zoekHulpDetail(id) {
