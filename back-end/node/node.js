@@ -41,7 +41,7 @@ client.connect(err => {
     videoCollection = client.db("bachelorproef").collection("video");
     centra = client.db("bachelorproef").collection("centra");
     // perform actions on the collection object
-    console.log('We are connected bitches');
+    //console.log('We are connected bitches');
     runProgram();
 });
 
