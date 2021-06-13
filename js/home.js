@@ -6,7 +6,6 @@ $(document).ready(function () {
     newUser();
     stroornissen();
     zoekHulp();
-    //dagboekShow();
 
     $('.stoornisDetail').hide();
     $('.zoekHulpDetail').hide();
@@ -119,6 +118,7 @@ function logOut() {
     }).done(function (data) {
         //console.log(data);
         window.localStorage.clear();
+        window.sessionStorage.clear();
         window.location.href = "home.html";
     })
 }
@@ -235,7 +235,7 @@ function login() {
                 } else {
                     window.location.href = "home.html";
                     localStorage.setItem("userId", userId);
-
+                    sessionStorage.setItem('status','loggedIn') 
                 }
                 if(username === "admin"){
                     window.location.href = "admin.html";
@@ -396,7 +396,10 @@ function stroornissen() {
 }
 
 function stoornisDetail(id) {
-    GetVideoComments(id)
+    let userid = localStorage.getItem("userId")
+    if (sessionStorage.getItem('status') != null){
+        GetVideoComments(id)
+         }
     console.log(id);
     $('#stoornis').hide();
     $('.stoornisDetail').show();
